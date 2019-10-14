@@ -1,0 +1,216 @@
+<html>
+<head>
+	<title>calculator</title>
+</head>
+<body>
+	<button id='b0' onclick="f0()">0</button>
+	<button id='b1' onclick="f1()">1</button>
+	<button id='b2' onclick="f2()">2</button>
+	<button id='b3' onclick="f3()">3</button>
+	<button id='b4' onclick="f4()">4</button>
+	<button id='b5' onclick="f5()">5</button>
+	<button id='b6' onclick="f6()">6</button>
+	<button id='b7' onclick="f7()">7</button>
+	<button id='b8' onclick="f8()">8</button>
+	<button id='b9' onclick="f9()">9</button>
+	<button id='bpoint' onclick="fpoint()">.</button>
+	<button id='bclear' onclick="fclear()">CLR</button>
+	<button id='bac' onclick="fac()">AC</button>
+	<button id='b+' onclick="fadd()">+</button>
+	<button id='b-' onclick="fsub()">-</button>
+	<button id='b*' onclick="fmul()">*</button>
+	<button id='b/' onclick="fdiv()">/</button>
+	<button id='b/' onclick="fequal()">=</button>
+	<form>
+		<input id="ipop" name="ipandop"/>
+	</form>
+<script type="text/javascript">
+	var ipop=document.getElementById("ipop");
+	var store=""
+	var symbol=""
+	var flag=0
+	var equal=0
+	function fequal()
+	{
+		equal=1
+		fcal()
+		symbol=""
+		flag=1
+	}
+	function fac()
+	{
+		ipop.value=""
+		store=""
+	}
+	function fclear()
+	{
+		ipop.value=""
+	}
+	function fpoint()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+=".";
+	}
+	function f0()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+=0
+	}
+	function f1()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="1";
+	}
+	function f2()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="2";
+	}
+	function f3()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="3";
+	}
+	function f4()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="4";
+	}
+	function f5()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="5";
+	}
+	function f6()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="6";
+	}
+	function f7()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="7";
+	}
+	function f8()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="8";
+	}
+	function f9()
+	{
+		if(flag==1)
+		{
+			ipop.value=""
+			flag=0
+		}
+		ipop.value+="9";
+	}
+	function fadd()
+	{
+		fcal()
+		if(symbol=="")
+			symbol="+"
+	}
+	function fsub()
+	{
+		if(ipop.value=="")
+			ipop.value="-"
+		else
+		{
+			fcal()
+			if(symbol=="")
+				symbol="-"
+		}
+	}
+	function fmul()
+	{
+		fcal()
+		if(symbol=="")
+			symbol="*"
+	}
+	function fdiv()
+	{
+		fcal()
+		if(symbol=="")
+			symbol="/"
+	}
+
+	function fcal()
+	{
+		if(store=="")
+		{
+			store=ipop.value;
+			ipop.value=""
+		}
+		else
+		{
+			if(symbol=="+")
+			{
+				ipop.value=(parseFloat(ipop.value)+parseFloat(store)).toString()
+			}
+			else if(symbol=="-")
+			{
+				ipop.value=(parseFloat(store)-parseFloat(ipop.value)).toString()
+			}
+			else if(symbol=="*")
+			{
+				ipop.value=(parseFloat(ipop.value)*parseFloat(store)).toString()
+			}
+			else if(symbol=="/")
+			{
+				ipop.value=(parseFloat(store)/parseFloat(ipop.value)).toString()
+			}
+			symbol=""
+			if(equal==0)
+			{
+				store=ipop.value
+			}
+			else
+				equal=0
+			flag=1
+		}
+		
+	}
+
+</script>
+</body>
