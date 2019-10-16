@@ -8,7 +8,81 @@
             Log in | Stock Wolves
         </title>
         <link rel="icon" href="wolves.png" />
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="common.css">
+        <style>
+            
+            #signIn{
+                background-color:white;
+                color: #4CBF50;
+                font-family: 'Roboto', sans-serif;
+                text-decoration: underline;
+                overflow: hidden;
+                font-weight: bold;
+
+                
+                text-align: center;
+                image-resolution: 32px;
+                display: block;
+                padding: 15px;
+                font-size: 30px;
+            }
+
+            form{
+                text-align: center;
+                border-radius: 5px;
+                background-color: rgba(216, 211, 211, 0.623);
+                padding: 0.5%;
+                width: 30%;
+                margin: auto;
+                border: 5%;
+            }
+
+            .formDiv
+            {
+                display: inline-block;
+            }
+
+            input[type=text], input[type=password]{
+                width: 75%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                text-decoration: underline;
+            }
+
+            label{
+                color: #4CBF50;
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            button{
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 10px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 24px;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            button:hover{
+                background-color: limegreen
+            }
+
+            button:active
+            {
+                background-color: green;
+            }
+        </style>
 
     </HEAD>
     <BODY>
@@ -31,17 +105,18 @@
             <a href="index.html">Stock Simulator or something</a>
         </div>
 
-        <div id="login">
-            <span id="signIn">Sign In</span>
-            <div class = "inputBoxes">
-                <input type="text">
-                <input type="text">
-            </div>
-
-            </div>
-            <button id="loginButton">Login</button>
-
-
+        <span id="signIn">Sign In</span><br><br>
+        <div class="fromDiv">
+            <form id="login" action="login.php">
+                
+                <div class = "inputBoxes">
+                    <label for="EmailID">Email ID</label><br>
+                    <input type="text" name="emailID" placeholder="Email ID"><br><br><br>
+                    <label for="passwd">Password</label><br>
+                    <input type="password" name="password", placeholder="Password"><br><br>
+                </div>
+                    <button id="loginButton">Login</button>
+            </form>
         </div>
 
     </BODY>
