@@ -60,3 +60,25 @@ img{
     75%  {background-color:white; left:0px; top:200px;}
     100% {background-color:#D8D3D3; left:0px; top:0px;}
   }
+
+.search-container {
+      float: right;
+      background-color: gray;;
+      font-size: 28px;
+  }
+
+#searchBox {
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 20px;
+    border-radius: 15px;
+    font-size: 28px;
+    text-indent: 0.5em;
+}
+
+#searchButton {
+    float: right;
+    margin-left: 10px;
+    margin-top: 7px;
+    margin-right: 10px;
+}
