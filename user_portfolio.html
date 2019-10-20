@@ -1,0 +1,305 @@
+<html>
+    <head>
+        <style>
+            table{
+                border-collapse: collapse;
+                height:50px;
+                text-align:left;
+                padding: 15px;
+                border-color: blueviolet;
+            }
+            th{
+                vertical-align:center;
+                height:25px;
+                padding: 15px;
+            }
+            td{
+                vertical-align:bottom;
+                height: 30px;
+                padding:15px;
+            }
+            tr:hover{
+                background-color: yellowgreen;
+            }
+
+            tr :nth-child(){
+                background-color: #f2f2f2;
+            }
+            .image{
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 730px;
+            }
+
+            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+            * {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .topbar{
+                background-color: gray;
+                overflow: hidden;
+                /* color: lightgreen; */
+            }
+            .topbar a{
+                text-decoration: none;
+                font-weight: bold;
+                /* display: block; */
+                font-size: 18px;
+                color:white;
+                padding: 15px;
+            }
+            .topbar a:hover{
+                background-color:limegreen;
+            }
+            .topbarRight a:active{
+                background-color: green;
+            }
+            .topbarLeft a{
+                float: left;
+                /* margin-right: 100px; */
+            }
+            .topbarRight a{
+                float: right;
+            }
+
+
+            .titleBar *{
+                background-color:white;
+                color: #4CBF50;
+                font-family: 'Roboto', sans-serif;
+                text-decoration: none;
+                overflow: hidden;
+                font-weight: bold;
+                
+                text-align: center;
+                image-resolution: 32px;
+                display: block;
+                padding: 15px;
+                font-size: 30px;
+                
+                animation: titleAni 5s linear 2s infinite alternate;
+            }
+
+            img{
+                float: right;
+                width: 2.05%;
+            }
+
+            @keyframes titleAni {
+                0%   {background-color:#D8D3D3; left:0px; top:0px;}
+                25%  {background-color:white; left:200px; top:0px;}
+                50%  {background-color:#D8D3D3; left:200px; top:200px;}
+                75%  {background-color:white; left:0px; top:200px;}
+                100% {background-color:#D8D3D3; left:0px; top:0px;}
+            }
+
+            .search-container {
+                float: right;
+                background-color: gray;;
+                font-size: 28px;
+            }
+
+            #searchBox {
+                height: 30px;
+                margin-top: 7px;
+                margin-left: 20px;
+                border-radius: 15px;
+                font-size: 28px;
+                text-indent: 0.5em;
+            }
+
+            #searchButton {
+                float: right;
+                margin-left: 10px;
+                margin-top: 7px;
+                margin-right: 10px;
+            }
+
+        </style>
+    </head>
+    <div class="image">
+    
+
+    <body>
+        <div class="topbar">
+            <div class="topbarLeft">
+                <a>Enter Contact mail ID here</a>
+                <a>+91 9876543210</a>
+            </div>
+            <div class="topbarRight">
+                <!-- REMOVE THE APPROPRIATE TAGS 
+                        WHILE MAKING THE PAGE -->
+                <a href="about.html#faq">FAQ</a>
+            </div>
+        </div>
+        <div class="titleBar">
+            <img src="wolf.png" alt="">
+            <a href="index.html">Stock Simulator or something</a>
+        </div>
+
+        <h3><font color="red">PORTFOLIO</font></h3>
+        <p>                                                 <right><h4><font color="blue">Logged in as </font>:USERNAME</h4></right></p>
+        <table border="1" bgcolor= "grey">
+            <tr>
+                <th>Number</th>
+                <th>Company Name</th>
+                <th>Stocks Held</th>
+                <th>Stock Price</th>
+                <th>Current Market price</th>
+            </tr>
+            
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                
+        </table>
+        
+        <svg id="sen" viewBox="-100 -10 300 250" class="chart" >
+        	<rect x="5" y="0" width="80" height="40" style="stroke: #0086b3; fill: #ccf2ff"></rect>
+        	<line stroke-dasharray="2,2" x1="5" y1="10" x2="85" y2="10" style="stroke:#0086b3;stroke-width:0.5"></line>
+        	<line stroke-dasharray="2,2" x1="5" y1="20" x2="85" y2="20" style="stroke:#0086b3;stroke-width:0.5"></line>
+        	<line stroke-dasharray="2,2" x1="5" y1="30" x2="85" y2="30" style="stroke:#0086b3;stroke-width:0.5"></line>
+        	<line stroke-dasharray="2,2" x1="5" y1="40" x2="85" y2="40" style="stroke:#0086b3;stroke-width:0.5"></line>
+        	<text x="10" y="38" font-family="30" font-size="2.5" fill="#000000">RED - SENSEX, GREEN - NIFTY </text>
+        	<text x="78" y="38" font-family="30" font-size="4" fill="#000000">40 </text>
+        	<text x="11" y="5" font-family="30" font-size="3" fill="#000000">PERIOD - 1 WEEK </text>
+        	<text x="78" y="22" font-family="30" font-size="2.4" fill="#000000">20 </text>
+        	<text x="78" y="5" font-family="30" font-size="2.4" fill="#000000">40 </text>
+			<polyline id="sensexpoly" fill="none" stroke="#ff6347" stroke-width="1" points="15 5 10 30 30 5 40 25 50 30 60 27.5 70 15"></polyline>
+			<polyline id="niftypoly" fill="none" stroke="rgb(60, 179, 113)" stroke-width="1" points="10 25 20 15 30 30 40 27.5 50 32 60 29 70 10"></polyline>
+			<text x="78" y="38" font-family="30" font-size="2.4" fill="#000000">40 </text>
+
+		</svg>
+
+        <!--<script type="text/javascript">
+        	document.body.onload=start
+        	var sensex=[300,150,200,100,50,75,200]
+        	var nifty=[100,200,50,75,30,60,250]
+        	var barg=[80,70,50,20]
+        	var sencount=1.5
+        	var nifcount=1.5
+        	var timer=0
+        	var senobj=document.getElementById("sensexpoly")
+        	var senstr=''
+        	var news=['apple has messed its new product','samsung fold is a joke','oneplus phones are descent','pixel 4 is the most buggy phone','vivo is copying the other brands']
+        	sensexInsert()
+			function start()
+			{
+				setInterval("TIMER()",50); //in milliseconds
+			}
+        	function pointConvert(a)
+        	{
+        		return(30-a/10+5)
+        	}
+        	function TIMER()
+        	{
+        		timer+=1
+        		sensexInsert()
+        		niftyInsert()
+        		barAssign()
+        		headLines()
+        	}
+        	function sensexInsert()
+        	{
+        		if(sensex.length && (timer%5)==0) 
+        		{
+        			var b=pointConvert(sensex.shift())
+					var svg = document.getElementById('sen');
+					var point = svg.createSVGPoint()
+					point.x=sencount*10-5
+					point.y=b
+					var senpoly=document.getElementById("sensexpoly")
+					senpoly.points.appendItem(point)
+        			sencount++;
+        		}
+        	}
+        	function niftyInsert()
+        	{
+        		if(nifty.length && (timer%5)==0)
+        		{
+        			var b=pointConvert(nifty.shift())
+					var svg = document.getElementById('sen');
+					var point = svg.createSVGPoint()
+					point.x=nifcount*10-5
+					point.y=b
+					var nifpoly=document.getElementById("niftypoly")
+					nifpoly.points.appendItem(point)
+        			nifcount++;
+        		}
+        	}
+        	function barAssign()
+        	{
+        		if(timer%10==0 && barg.length)
+        		{
+        			var svg = document.getElementById('sen');
+        			if(timer/10==1)
+        			{
+        				var barobj=document.getElementById("bar1");
+        				var b=barg.shift()/2
+        				barobj.setAttribute("height",b)
+        				barobj.setAttribute("y",50-b)
+        			}
+        			else if(timer/10==2)
+        			{
+        				var barobj=document.getElementById("bar2");
+        				var b=barg.shift()/2
+        				barobj.setAttribute("height",b)
+        				barobj.setAttribute("y",50-b)
+        			}
+        			else if(timer/10==3)
+        			{
+        				var barobj=document.getElementById("bar3");
+        				var b=barg.shift()/2
+        				barobj.setAttribute("height",b)
+        				barobj.setAttribute("y",50-b)
+        			}
+        			else if(timer/10==4)
+        			{
+        				var barobj=document.getElementById("bar4");
+        				var b=barg.shift()/2
+        				barobj.setAttribute("height",b)
+        				barobj.setAttribute("y",50-b)
+        			}
+        		}
+        	}
+        	function headLines()
+        	{
+        		if(news.length && (timer%100==0 || timer==10))
+        		{
+        			var t1=document.getElementById("hd1")
+        			var t2=document.getElementById("hd2")
+        			var t3=document.getElementById("hd3")
+        			var t4=document.getElementById("hd4")
+        			t4.innerHTML=t3.innerHTML
+        			t3.innerHTML=t2.innerHTML
+        			t2.innerHTML=t1.innerHTML
+        			t1.innerHTML='-> '+news.shift()
+        		}
+        	}
+        </script>-->
+        
+</body>
+</div> 
+</html>
