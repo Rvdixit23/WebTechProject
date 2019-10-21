@@ -1,112 +1,84 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 * {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-.topbar {
+.topbar{
     background-color: gray;
     overflow: hidden;
-    /* color: lightgreen; */
+    color: lightgreen;
 }
-.topbar a {
+.topbar a{
     text-decoration: none;
     font-weight: bold;
-    /* display: block; */
+    display: block;
     font-size: 18px;
-    color: white;
+    color:white;
     padding: 15px;
 }
-.topbar a:hover {
-    background-color: limegreen;
+.topbar a:hover{
+    background-color:limegreen;
 }
-.topbarRight a:active {
+.topbarRight a:active{
     background-color: green;
 }
-.topbarLeft a {
+.topbarLeft a{
     float: left;
     /* margin-right: 100px; */
 }
-.topbarRight a {
+.topbarRight a{
     float: right;
 }
-.titleBar * {
-    background-color: white;
-    color: #4cbf50;
-    font-family: "Roboto", sans-serif;
+
+
+.titleBar *{
+    background-color:white;
+    color: #4CBF50;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     overflow: hidden;
     font-weight: bold;
-    height: 40px;
-
+    
     text-align: center;
-    image-resolution: 100%;
+    image-resolution: 32px;
     display: block;
     padding: 15px;
     font-size: 30px;
-
+    
     animation: titleAni 5s linear 2s infinite alternate;
 }
 
-.titleBar > img {
+img{
     float: right;
-    height: inherit/2;
-    width: auto;
+    width: 2.05%;
 }
 
 @keyframes titleAni {
-    0% {
-        background-color: #d8d3d3;
-        left: 0px;
-        top: 0px;
-    }
-    25% {
-        background-color: white;
-        left: 200px;
-        top: 0px;
-    }
-    50% {
-        background-color: #d8d3d3;
-        left: 200px;
-        top: 200px;
-    }
-    75% {
-        background-color: white;
-        left: 0px;
-        top: 200px;
-    }
-    100% {
-        background-color: #d8d3d3;
-        left: 0px;
-        top: 0px;
-    }
-}
+    0%   {background-color:#D8D3D3; left:0px; top:0px;}
+    25%  {background-color:white; left:200px; top:0px;}
+    50%  {background-color:#D8D3D3; left:200px; top:200px;}
+    75%  {background-color:white; left:0px; top:200px;}
+    100% {background-color:#D8D3D3; left:0px; top:0px;}
+  }
 
 .search-container {
-    float: right;
-    background-color: gray;
-    font-size: 28px;
-}
+      float: right;
+      background-color: gray;;
+      font-size: 28px;
+  }
 
 #searchBox {
-    height: 28px;
-
+    height: 30px;
     margin-top: 7px;
     margin-left: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-
-    border-radius: 5px;
-    width: 200px;
-    font-size: 16px;
+    border-radius: 15px;
+    font-size: 28px;
     text-indent: 0.5em;
 }
 
 #searchButton {
     float: right;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 7px;
     margin-right: 10px;
-    margin-bottom: 10px;
-    height: 35px;
-    width: 35px;
 }
