@@ -1,0 +1,68 @@
+#signIn {
+    background-color: white;
+    color: #4cbf50;
+    font-family: "Roboto", sans-serif;
+    text-decoration: underline;
+    overflow: hidden;
+    font-weight: bold;
+
+    text-align: center;
+    image-resolution: 32px;
+    display: block;
+    padding: 15px;
+    font-size: 30px;
+}
+
+form#login {
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(216, 211, 211, 0.623);
+    padding: 0.5%;
+    width: 30%;
+    margin: auto;
+    border: 5%;
+}
+
+.formDiv {
+    display: inline-block;
+}
+
+.inputBoxes > input {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-decoration: underline;
+}
+
+label {
+    color: #4cbf50;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: limegreen;
+}
+
+button:active {
+    background-color: green;
+}

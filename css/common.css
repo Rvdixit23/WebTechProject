@@ -3,12 +3,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.topbar{
+/* ---Top Bar--- */
+.topbar {
     background-color: gray;
     overflow: hidden;
     color: lightgreen;
 }
-.topbar a{
+.topbar a {
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -16,28 +17,30 @@
     color:white;
     padding: 15px;
 }
-.topbar a:hover{
+.topbar a:hover {
     background-color:limegreen;
 }
-.topbarRight a:active{
+.topbarRight a:active {
     background-color: green;
 }
-.topbarLeft a{
+.topbarLeft a {
     float: left;
     /* margin-right: 100px; */
 }
-.topbarRight a{
+.topbarRight a {
     float: right;
 }
 
 
-.titleBar *{
+/* ---Title Bar--- */
+.titleBar * {
     background-color:white;
     color: #4CBF50;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     overflow: hidden;
     font-weight: bold;
+    height: 40px;
     
     text-align: center;
     image-resolution: 32px;
@@ -47,12 +50,11 @@
     
     animation: titleAni 5s linear 2s infinite alternate;
 }
-
-img{
+.titleBar > img {
     float: right;
-    width: 2.05%;
+    height: inherit/2;
+    width: auto;
 }
-
 @keyframes titleAni {
     0%   {background-color:#D8D3D3; left:0px; top:0px;}
     25%  {background-color:white; left:200px; top:0px;}
@@ -61,12 +63,13 @@ img{
     100% {background-color:#D8D3D3; left:0px; top:0px;}
   }
 
+  
+  /* ---Search Button--- */
 .search-container {
       float: right;
       background-color: gray;;
       font-size: 28px;
   }
-
 #searchBox {
     height: 28px;
     margin-top: 7px;
@@ -76,9 +79,8 @@ img{
     border-radius: 5px;
     width: 200px;
     font-size: 16px;
-    text-indent: 0.5em
+    text-indent: 0.5em;
 }
-
 #searchButton {
     float: right;
     margin-left: 10px;
