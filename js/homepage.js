@@ -60,22 +60,22 @@ function barAssign() {
             var barobj = document.getElementById("bar1");
             var b = barg.shift() / 2;
             barobj.setAttribute("height", b);
-            barobj.setAttribute("y", 50 - b);
+            barobj.setAttribute("y", 170 - b);
         } else if (timer / 10 == 2) {
             var barobj = document.getElementById("bar2");
             var b = barg.shift() / 2;
             barobj.setAttribute("height", b);
-            barobj.setAttribute("y", 50 - b);
+            barobj.setAttribute("y", 170 - b);
         } else if (timer / 10 == 3) {
             var barobj = document.getElementById("bar3");
             var b = barg.shift() / 2;
             barobj.setAttribute("height", b);
-            barobj.setAttribute("y", 50 - b);
+            barobj.setAttribute("y", 170 - b);
         } else if (timer / 10 == 4) {
             var barobj = document.getElementById("bar4");
             var b = barg.shift() / 2;
             barobj.setAttribute("height", b);
-            barobj.setAttribute("y", 50 - b);
+            barobj.setAttribute("y", 170 - b);
         }
     }
 }
