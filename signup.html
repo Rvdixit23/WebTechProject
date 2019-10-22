@@ -9,6 +9,7 @@
         </title>
         <link rel="icon" href="/images/favicon.png" />
         <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/signup.css">
     </HEAD>
     <BODY>
         <div class="topbar">
@@ -34,5 +35,61 @@
             <img src="/images/wolf_logo.png" alt="" />
             <a href="index.html">Stock Simulator or something</a>
         </div>
+
+        <!-- The Sign Up part starts here -->
+        <span id="signUp">Sign Up</span><br />
+        <div class="fromDiv">
+            <form id="login" action="/php/login.php">
+                <div class="inputBoxes">
+                    
+                    <div class="userDetails">
+                        <label for="userDetails" style="text-decoration: underline; font-size: 25px;">User Details</label><br><br>
+                        <!-- Email ID -->
+                        <label for="EmailID">Email ID</label><br />
+                        <input type="text" name="emailID" placeholder="Email ID" id=""/><br /><br />
+
+                        
+                        <!-- First Name  -->
+                        <label for="FirstName">First Name</label><br />
+                        <input type="text" name="firstName" placeholder="First Name" /><br /><br />
+
+                        <!-- Last Name  -->
+                        <label for="LastName">Last Name</label><br />
+                        <input type="text" name="lastName" placeholder="Last Name" /><br /><br />
+
+                        <!-- Phone Number -->
+                        <label for="PhoneNumber">Phone Number</label><br />
+                        <input type="text" name="phoneNumber" placeholder="Ph. Number" /><br /><br />
+                    
+                        <!-- Date of Birth -->
+                        <label for="DateOfBirth">Date of Birth</label><br />
+                        <input type="date" name="dateOfBirth" placeholder="DD/MM/YYYY" /><br /><br />
+                    
+                    </div>
+
+                    
+                
+                </div>
+                <div class="accountDetails">
+                        
+                    
+                        <label for="accountDetails" style="text-decoration: underline; font-size: 25px;">Account Details</label><br><br>
+                        
+                        <!-- Username -->
+                        <label for="Username">Username</label><br />
+                        <input type="text" name="username" placeholder="Username" /><br /><br />
+
+                        <!-- Password -->
+                        <label for="passwd">Password</label><br />
+                        <input type="password" name="password" , placeholder="Password" /><br /><br />
+
+                        <!-- Confirm Password -->
+                        <label for="passwd">Confirm Password</label><br />
+                        <input type="password" name="password" , placeholder="Confirm Password" /><br /><br />
+                    </div>
+                <button id="registerButton">Register</button>
+            </form>
+        </div>
+
     </BODY>
 </HTML>

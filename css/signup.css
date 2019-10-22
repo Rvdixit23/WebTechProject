@@ -1,4 +1,4 @@
-#signIn {
+#signUp {
     background-color: white;
     color: #4cbf50;
     font-family: "Roboto", sans-serif;
@@ -18,16 +18,19 @@ form#login {
     border-radius: 5px;
     background-color: rgba(216, 211, 211, 0.623);
     padding: 0.5%;
-    width: 30%;
+    width: 50%;
     margin: auto;
     border: 5%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 20px;
 }
 
 .formDiv {
     display: inline-block;
 }
 
-.inputBoxes > input {
+.inputBoxes .userDetails input{
     width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -36,6 +39,19 @@ form#login {
     border-radius: 4px;
     box-sizing: border-box;
     text-decoration: underline;
+    grid-column: 1 /1;
+}
+
+.accountDetails input{
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-decoration: underline;
+    grid-column: 1 /2;
 }
 
 .inputBoxes > a {
@@ -49,7 +65,7 @@ label {
     color: #4cbf50;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 button {
@@ -64,6 +80,8 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     font-weight: bold;
+    align-self: center;
+    width: 205%;
 }
 
 button:hover {
