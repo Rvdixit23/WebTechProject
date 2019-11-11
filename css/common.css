@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
-*, html {
+*,
+html {
     margin: 0px;
     /* If something is wrong, it might be this css */
     padding: 0px;
@@ -20,12 +21,12 @@
     font-weight: bold;
     display: block;
     font-size: 18px;
-    color:white;
+    color: white;
     padding: 15px;
     transition: all 0.3s ease;
 }
 .topbar a:hover {
-    background-color:limegreen;
+    background-color: limegreen;
 }
 .topbarRight a:active {
     background-color: green;
@@ -38,25 +39,23 @@
     float: right;
 }
 
-
 /* ---Title Bar--- */
 .titleBar * {
-    background-color:white;
-    color: #4CBF50;
-    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: #4cbf50;
+    font-family: "Roboto", sans-serif;
     text-decoration: none;
     overflow: hidden;
     font-weight: bold;
     height: 40px;
-    
+
     text-align: center;
     image-resolution: 32px;
     display: block;
     padding: 15px;
     font-size: 30px;
-    
+
     animation: titleAni 5s linear 2s infinite alternate;
-    
 }
 .titleBar > img {
     float: right;
@@ -64,20 +63,39 @@
     width: auto;
 }
 @keyframes titleAni {
-    0%   {background-color:#D8D3D3; left:0px; top:0px;}
-    25%  {background-color:white; left:200px; top:0px;}
-    50%  {background-color:#D8D3D3; left:200px; top:200px;}
-    75%  {background-color:white; left:0px; top:200px;}
-    100% {background-color:#D8D3D3; left:0px; top:0px;}
-  }
+    0% {
+        background-color: #d8d3d3;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: white;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: #d8d3d3;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: white;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: #d8d3d3;
+        left: 0px;
+        top: 0px;
+    }
+}
 
-  
-  /* ---Search Button--- */
+/* ---Search Button--- */
 .search-container {
-      float: right;
-      background-color: gray;;
-      font-size: 28px;
-  }
+    float: right;
+    background-color: gray;
+    font-size: 28px;
+}
 #searchBox {
     height: 28px;
     margin-top: 7px;
@@ -99,10 +117,8 @@
     width: 35px;
 }
 
-
-
 body {
-    background-image: url("/images/background2.jpg");
+    background-image: url("/images/background.jpg");
     height: 100%;
     background-position: top center;
     background-repeat: no-repeat;
@@ -111,6 +127,4 @@ body {
     z-index: -1;
     max-width: 100%;
     /* background: rgba(0,0,0,.5); */
-    
-
 }
