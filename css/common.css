@@ -49,6 +49,7 @@
     font-size: 30px;
     
     animation: titleAni 5s linear 2s infinite alternate;
+    transition: all 0.3s;
 }
 .titleBar > img {
     float: right;

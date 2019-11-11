@@ -1,30 +1,53 @@
-table {
-    border-collapse: collapse;
-    height: 50px;
-    text-align: left;
+.pageTitle {
+    background-color:white;
+    color: rgb(76, 191, 80);
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline;
+    overflow: hidden;
+    font-weight: bold;
+    height: 40px;
+    
+    text-align: center;
+    image-resolution: 32px;
+    display: block;
     padding: 15px;
-    border-color: blueviolet;
-}
-th {
-    vertical-align: center;
-    height: 25px;
-    padding: 15px;
-}
-td {
-    vertical-align: bottom;
-    height: 30px;
-    padding: 15px;
-}
-tr:hover {
-    background-color: yellowgreen;
+    font-size: 25px;
 }
 
-tr :nth-child() {
-    background-color: #f2f2f2;
+.table {  
+    color: rgb(76, 191, 80);
+    font-family: Helvetica, Arial, sans-serif;
+    width: 70%; 
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(76, 191, 80);
+    border-radius: 8px;
 }
-.image {
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 730px;
+
+td, th {  
+    border: 1px solid rgb(76, 191, 80); 
+    transition: all 0.3s;  
+    border-radius: 8px;
+    height: 40px;
+    color: black;
 }
+
+th {  
+    background: #DFDFDF;  /* Darken header a bit */
+    font-weight: bold;
+}
+
+td {  
+    background: #FAFAFA;
+    text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */        
+tr:nth-child(even) td { background: #F1F1F1; }   
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */        
+tr:nth-child(odd) td { background: #FEFEFE; }  
+
+tr td:hover { background: #666; color: #FFF; }  
+/* Hover cell effect! */
