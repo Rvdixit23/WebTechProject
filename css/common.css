@@ -3,6 +3,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+*, html {
+    margin: 0px;
+    /* If something is wrong, it might be this css */
+    padding: 0px;
+}
+
 /* ---Top Bar--- */
 .topbar {
     background-color: gray;
@@ -91,4 +97,20 @@
     margin-bottom: 10px;
     height: 35px;
     width: 35px;
+}
+
+
+
+body {
+    background-image: url("/images/background2.jpg");
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    max-width: 100%;
+    /* background: rgba(0,0,0,.5); */
+    
+
 }
