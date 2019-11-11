@@ -2,7 +2,7 @@
 <HTML lang="en">
     <style>
         #box1 {
-        background-color: lightgrey;
+        background-color: lightgoldenrodyellow;
         width: 250px;
         border: 10px solid green;
         padding: 35px;
@@ -13,7 +13,7 @@
         }
 
         #box2{
-        background-color: lightgrey;
+        background-color: lightgoldenrodyellow;
         width: 250px;
         border: 10px solid green;
         padding: 35px;
@@ -22,6 +22,43 @@
         align-items: center;
         align-self: center;
         }
+
+        #mytable {  
+        color: rgb(76, 191, 80);
+        font-family: Helvetica, Arial, sans-serif;
+        width: 70%; 
+        height: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid rgb(76, 191, 80);
+        border-radius: 8px;
+    }
+
+        td, th {  
+                border: 1px solid rgb(76, 191, 80); 
+                transition: all 0.3s;  
+                border-radius: 8px;
+                height: 40px;
+                color: black;
+            }
+
+        th {  
+                background:greenyellow;  /* Darken header a bit */
+                font-weight: bold;
+            }
+
+        td {  
+                background: #FAFAFA;
+                text-align: center;
+            }
+        /* Cells in even rows (2,4,6...) are one color */        
+        tr:nth-child(even) td { background: #F1F1F1; }   
+
+        /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */        
+        tr:nth-child(odd) td { background: #FEFEFE; }  
+
+        tr td:hover { background: #666; color: #FFF; }  
+        /* Hover cell effect! */
     </style>
     </style>
     <HEAD>
@@ -62,50 +99,103 @@
         </div>
 
         <div id="big_div">
-                
-
-                <div id="box1">
-                    <b><u>Stock Information:</b></u><br><br>
-                    Opening: $566.6<br>
-                    Previous close: $459.8<br>
-                    Current price: $601<br>
-                    Average (10-day): $479.67<br>
-                    Market cap: $10B <br>
-                </div>
-                <div id="box2">
-                    <b>Shares Owned : 100</b><br><br>
-                    <input type ="button" id="+button1" value="+"></input>  45  <input type ="button" id="-button1" value="-"></input>   <input type ="button" id="buy_button" value="Buy"></input><br><br>
-                    <input type ="button" id="+button2" value="+"></input>  45  <input type ="button" id="-button2" value="-"></input>   <input type ="button" id="sell_button" value="Sell"></input><br><br>
-                </div>
-                <div id="svg_div">
-                        <svg id="sen" viewBox="-100 -10 300 250" class="chart">
-                                <rect x="5" y="0" width="80" height="40" style="stroke: #0086b3; fill: #ccf2ff"></rect>
-                                <line stroke-dasharray="2,2" x1="5" y1="10" x2="85" y2="10" style="stroke:#0086b3;stroke-width:0.5"></line>
-                                <line stroke-dasharray="2,2" x1="5" y1="20" x2="85" y2="20" style="stroke:#0086b3;stroke-width:0.5"></line>
-                                <line stroke-dasharray="2,2" x1="5" y1="30" x2="85" y2="30" style="stroke:#0086b3;stroke-width:0.5"></line>
-                                <line stroke-dasharray="2,2" x1="5" y1="40" x2="85" y2="40" style="stroke:#0086b3;stroke-width:0.5"></line>
-                                <text x="10" y="38" font-family="30" font-size="2.5" fill="#000000">RED - SENSEX, GREEN - NIFTY</text>
-                                <text x="78" y="38" font-family="30" font-size="4" fill="#000000">40</text>
-                                <text x="11" y="5" font-family="30" font-size="3" fill="#000000">PERIOD - 1 WEEK</text>
-                                <text x="78" y="22" font-family="30" font-size="2.4" fill="#000000">20</text>
-                                <text x="78" y="5" font-family="30" font-size="2.4" fill="#000000">40</text>
-                            <polyline
-                                id="sensexpoly"
-                                fill="none"
-                                stroke="#ff6347"
-                                stroke-width="1"
-                                points="15 5 10 30 30 5 40 25 50 30 60 27.5 70 15"
-                            ></polyline>
-                            <polyline
-                                id="niftypoly"
-                                fill="none"
-                                stroke="rgb(60, 179, 113)"
-                                stroke-width="1"
-                                points="10 25 20 15 30 30 40 27.5 50 32 60 29 70 10"
-                            ></polyline>
-                            <text x="78" y="38" font-family="30" font-size="2.4" fill="#000000">40</text>
-                        </svg>
-                </div>
+                <table border="1" id="mytable">
+                    <tr>
+                        <th>Date</th>
+                        <th>Variant</th>
+                        <th>Movement</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    
+                </table>
+                <center>
+            <div id="box1" style = "float:left; width: 20%;" >
+                <b><u>Stock Information:</b></u><br><br>
+                Opening: $566.6<br>
+                Previous close: $459.8<br>
+                Current price: $601<br>
+                Average (10-day): $479.67<br>
+                Market cap: $10B <br>
+            </div>
+            
+            <div id="box2" style = "float:left; width: 20%;">
+                <b>Shares Owned : 100</b><br><br>
+                <input type ="button" id="+button1" value=" + "></input>  45  <input type ="button" id="-button1" value=" - "></input>   <input type ="button" id="buy_button" value="  Buy  "></input><br><br>
+                <input type ="button" id="+button2" value=" + "></input>  45  <input type ="button" id="-button2" value=" - "></input>   <input type ="button" id="sell_button" value="  Sell  "></input><br><br>
+            </div>
+        </center>
+            
+            <div id="svg_div" >
+                <svg id="sen" viewBox="-0 -5 270 250" class="chart">
+                    <rect x="5" y="0" width="80" height="40" style="stroke: #0086b3; fill: #ccf2ff"></rect>
+                    <line stroke-dasharray="2,2" x1="5" y1="10" x2="85" y2="10" style="stroke:#0086b3;stroke-width:0.5"></line>
+                    <line stroke-dasharray="2,2" x1="5" y1="20" x2="85" y2="20" style="stroke:#0086b3;stroke-width:0.5"></line>
+                    <line stroke-dasharray="2,2" x1="5" y1="30" x2="85" y2="30" style="stroke:#0086b3;stroke-width:0.5"></line>
+                    <line stroke-dasharray="2,2" x1="5" y1="40" x2="85" y2="40" style="stroke:#0086b3;stroke-width:0.5"></line>
+                    <text x="10" y="38" font-family="30" font-size="2.5" fill="#000000">RED - SENSEX, GREEN - NIFTY</text>
+                    <text x="78" y="38" font-family="30" font-size="4" fill="#000000">40</text>
+                    <text x="11" y="5" font-family="30" font-size="3" fill="#000000">PERIOD - 1 WEEK</text>
+                    <text x="78" y="22" font-family="30" font-size="2.4" fill="#000000">20</text>
+                    <text x="78" y="5" font-family="30" font-size="2.4" fill="#000000">40</text>
+                <polyline
+                    id="sensexpoly"
+                    fill="none"
+                    stroke="#ff6347"
+                    stroke-width="1"
+                    points="15 5 10 30 30 5 40 25 50 30 60 27.5 70 15"
+                ></polyline>
+                <polyline
+                    id="niftypoly"
+                    fill="none"
+                    stroke="rgb(60, 179, 113)"
+                    stroke-width="1"
+                    points="10 25 20 15 30 30 40 27.5 50 32 60 29 70 10"
+                ></polyline>
+                <text x="78" y="38" font-family="30" font-size="2.4" fill="#000000">40</text>
+                </svg>
+            </div>
         </div> 
     </BODY>
 </HTML> 
