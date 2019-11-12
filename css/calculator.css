@@ -4,32 +4,83 @@
 }
 
 .button {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     font-size: 18px;
     margin: 1px;
     cursor: pointer;
     background: mediumseagreen;
     border: none;
     color: white;
+    transition: all 0.3s ease;
 }
 .button[value="0"] {
-    width: 104px;
+    width: 144px;
 }
 .button[value="="] {
-    height: 104px;
+    height: 142px;
 }
 .textview {
-    width: 200px;
-    margin: 1px;
+    width: 280px;
+    margin: 0 auto;
+    display: block;
     font-size: 25px;
     padding: 4px;
     color: mediumseagreen;
 }
 
-.main {
-    position: relative;
-    top: 50%;
+.textview input button {
+    left: 22.5%;
+}
+
+table {
+    position: absolute;
+    top: 22.5%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);    
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    align-content: center;
+}
+
+.button:hover {
+    background-color: #4cbf50;
+}
+
+.button:active {
+    background-color: black;
+}
+
+#equity {
+    text-decoration: none;
+    align-self: center;
+    font-weight: bold;
+    display: block;
+    font-size: 24px;
+    color: #4cbf50;
+    padding: 15px;
+    transition: all 0.3s ease;
+    top: 0%;
+}
+
+#equity input {
+    border-radius: 8px;
+    height: 25px;
+}
+
+#solve {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#solve:hover {
+    background-color: limegreen;
 }
