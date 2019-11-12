@@ -10,12 +10,15 @@ html {
     padding: 0px;
 }
 
+
 /* ---Top Bar--- */
+
 .topbar {
     background-color: gray;
     overflow: hidden;
     color: lightgreen;
 }
+
 .topbar a {
     text-decoration: none;
     font-weight: bold;
@@ -25,21 +28,27 @@ html {
     padding: 15px;
     transition: all 0.3s ease;
 }
+
 .topbar a:hover {
     background-color: limegreen;
 }
+
 .topbarRight a:active {
     background-color: green;
 }
+
 .topbarLeft a {
     float: left;
     /* margin-right: 100px; */
 }
+
 .topbarRight a {
     float: right;
 }
 
+
 /* ---Title Bar--- */
+
 .titleBar * {
     background-color: white;
     color: #4cbf50;
@@ -48,20 +57,20 @@ html {
     overflow: hidden;
     font-weight: bold;
     height: 40px;
-
     text-align: center;
     image-resolution: 32px;
     display: block;
     padding: 15px;
     font-size: 30px;
-
     animation: titleAni 5s linear 2s infinite alternate;
 }
-.titleBar > img {
+
+.titleBar>img {
     float: right;
     height: inherit/2;
     width: auto;
 }
+
 @keyframes titleAni {
     0% {
         background-color: #d8d3d3;
@@ -90,12 +99,15 @@ html {
     }
 }
 
+
 /* ---Search Button--- */
+
 .search-container {
     float: right;
     background-color: gray;
     font-size: 28px;
 }
+
 #searchBox {
     height: 28px;
     margin-top: 7px;
@@ -107,6 +119,7 @@ html {
     font-size: 16px;
     text-indent: 0.5em;
 }
+
 #searchButton {
     float: right;
     margin-left: 10px;
@@ -118,7 +131,7 @@ html {
 }
 
 body {
-    background-image: url("/images/background.jpg");
+    background-image: url("/images/background3.jpg");
     height: 100%;
     background-position: top center;
     background-repeat: no-repeat;

@@ -47,6 +47,10 @@ table {
     background-color: #4cbf50;
 }
 
+.button:active {
+    background-color: black;
+}
+
 #equity {
     text-decoration: none;
     align-self: center;
