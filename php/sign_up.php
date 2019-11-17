@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fnameErr = "FirstName is required";
   } else {
     $fname = test_input($_POST["firstname"]);
-    if (!preg_match("/^[a-zA-Z]*$/",$fname)) {
+    if (!preg_match("/^[a-zA-Z]+$/",$fname)) {
         $fnameErr1 = "Only letters allowed"; 
     }
   }
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lnameErr = "LastName is required";
   } else {
     $lname = test_input($_POST["lastname"]);
-    if (!preg_match("/^[a-zA-Z]*$/",$lname)) {
+    if (!preg_match("/^[a-zA-Z]+$/",$lname)) {
         $lnameErr1 = "Only letters allowed"; 
     }
   }
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phErr = "Phone number is required";
   } else {
     $ph = test_input($_POST["phoneNumber"]);
-    if (!preg_match("/^[0-9]*$/",$ph)) {
+    if (!preg_match("/^[0-9]+$/",$ph)) {
         $phErr1 = "Only numbers allowed"; 
     }
   }
