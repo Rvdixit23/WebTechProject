@@ -39,31 +39,41 @@
         <!-- The Sign Up part starts here -->
         <span id="signUp">Sign Up</span><br />
         <div class="fromDiv">
-            <form id="login" action="/php/login.php">
+            <form id="login" action="/php/sign_up.php" method="POST">
                 <div class="inputBoxes">
                     
                     <div class="userDetails">
                         <label for="userDetails" style="text-decoration: underline; font-size: 26px;">User Details</label><br><br><br>
+                        
                         <!-- Email ID -->
                         <label for="EmailID">Email ID</label><br />
                         <input type="text" name="emailID" placeholder="Email ID" id=""/><br /><br />
-
+                        <span class="error"></span>* <?php echo $emailErr;?></span>
+                        <span class="error">* <?php echo $emailErr1;?></span>
                         
                         <!-- First Name  -->
                         <label for="FirstName">First Name</label><br />
                         <input type="text" name="firstName" placeholder="First Name" /><br /><br />
+                        <span class="error">* <?php echo $fnameErr;?></span>
+                        <span class="error">* <?php echo $fnameErr1;?></span>
 
                         <!-- Last Name  -->
                         <label for="LastName">Last Name</label><br />
                         <input type="text" name="lastName" placeholder="Last Name" /><br /><br />
+                        <span class="error">* <?php echo $lnameErr;?></span>
+                        <span class="error">* <?php echo $lnameErr1;?></span>
 
                         <!-- Phone Number -->
                         <label for="PhoneNumber">Phone Number</label><br />
                         <input type="text" name="phoneNumber" placeholder="Ph. Number" /><br /><br />
+                        <span class="error">* <?php echo $phErr;?></span>
+                        <span class="error">* <?php echo $phErr1;?></span>
                     
                         <!-- Date of Birth -->
                         <label for="DateOfBirth">Date of Birth</label><br />
                         <input type="date" name="dateOfBirth" placeholder="DD/MM/YYYY" /><br /><br />
+                        <span class="error">* <?php echo $dobErr;?></span>
+                        <span class="error">* <?php echo $dobErr1;?></span>
                     
                     </div>
 
@@ -78,14 +88,20 @@
                         <!-- Username -->
                         <label for="Username">Username</label><br />
                         <input type="text" name="username" placeholder="Username" /><br /><br />
+                        <span class="error">* <?php echo $usernameErr;?></span>
+                        <span class="error">* <?php echo $usernameErr1;?></span><!--This error msg is only if the field is non-empty...someone change it later with isNonEmpty(), then this line, as of now ive put it with the common thing.-->
 
                         <!-- Password -->
                         <label for="passwd">Password</label><br />
                         <input type="password" name="password" , placeholder="Password" /><br /><br />
+                        <span class="error">* <?php echo $pswdErr;?></span>
+                        <span class="error">* <?php echo $pswdErr1;?></span>
 
                         <!-- Confirm Password -->
                         <label for="passwd">Confirm Password</label><br />
                         <input type="password" name="password" , placeholder="Confirm Password" /><br /><br />
+                        <span class="error">* <?php echo $pswdErr;?></span>
+                        <span class="error">* <?php echo $pswdErr1;?></span>
 
                         <br><br><br>
                         <button id="registerButton">Register</button><br><br>
