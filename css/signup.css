@@ -5,12 +5,13 @@
     text-decoration: underline;
     overflow: hidden;
     font-weight: bold;
-
     text-align: center;
     image-resolution: 32px;
     display: block;
     padding: 15px;
     font-size: 30px;
+    opacity: 1;
+    animation: titleAni 5s linear 2s infinite alternate;
 }
 
 form#login {
@@ -30,7 +31,7 @@ form#login {
     display: inline-block;
 }
 
-.inputBoxes .userDetails input{
+.inputBoxes .userDetails input {
     width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -42,7 +43,7 @@ form#login {
     grid-column: 1 /1;
 }
 
-.accountDetails input{
+.accountDetails input {
     width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -54,10 +55,11 @@ form#login {
     grid-column: 1 /2;
 }
 
-.inputBoxes > a {
+.inputBoxes>a {
     color: grey;
 }
-.inputBoxes > a:visited {
+
+.inputBoxes>a:visited {
     color: grey;
 }
 

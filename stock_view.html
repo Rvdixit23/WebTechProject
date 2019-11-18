@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <HTML lang="en">
-    <style>
-        #box1 {
+<style>
+    #box1 {
         background-color: lightgoldenrodyellow;
         width: 250px;
         border: 10px solid green;
@@ -10,10 +10,9 @@
         margin-top: 50px;
         margin-left: 265px;
         align-content: center;
-        
-        }
-
-        #box2{
+    }
+    
+    #box2 {
         background-color: lightgoldenrodyellow;
         width: 250px;
         border: 10px solid green;
@@ -22,47 +21,56 @@
         margin-top: 50px;
         margin-left: 300px;
         align-content: center;
-        
-        }
-
-        #mytable {  
+    }
+    
+    #mytable {
         color: rgb(76, 191, 80);
         font-family: Helvetica, Arial, sans-serif;
-        width: 70%; 
+        width: 70%;
         height: 40%;
         margin-left: auto;
         margin-right: auto;
         border: 2px solid rgb(76, 191, 80);
         border-radius: 8px;
-        }
-
-        td, th {  
-        border: 1px solid rgb(76, 191, 80); 
-        transition: all 0.3s;  
-        border-radius: 8px;
+    }
+    
+    td,
+    th {
+        border: 1px solid rgb(76, 191, 80);
+        transition: all 0.3s;
+        border-radius: 3px;
         height: 40px;
         color: black;
-        }
-
-        th {  
-        background:greenyellow;  /* Darken header a bit */
+    }
+    
+    th {
+        background: greenyellow;
+        /* Darken header a bit */
         font-weight: bold;
-        }
-
-        td {  
+    }
+    
+    td {
         background: #FAFAFA;
         text-align: center;
-        }
-        /* Cells in even rows (2,4,6...) are one color */        
-        tr:nth-child(even) td { background: #F1F1F1; }   
-
-        /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */        
-        tr:nth-child(odd) td { background: #FEFEFE; }  
-
-        tr td:hover { background: #666; color: #FFF; }  
-        /* Hover cell effect! */
-
-        #button1 {
+    }
+    /* Cells in even rows (2,4,6...) are one color */
+    
+    tr:nth-child(even) td {
+        background: #F1F1F1;
+    }
+    /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+    
+    tr:nth-child(odd) td {
+        background: #FEFEFE;
+    }
+    
+    tr td:hover {
+        background: #666;
+        color: #FFF;
+    }
+    /* Hover cell effect! */
+    
+    #button1 {
         background-color: #4caf50;
         border: none;
         color: white;
@@ -76,127 +84,123 @@
         font-weight: bold;
         transition: all 0.3s ease;
         border-radius: 10px;
-        }
-
-        #button1:hover {
+    }
+    
+    #button1:hover {
         background-color: greenyellow;
-        }
-
-        #button1:active {
+    }
+    
+    #button1:active {
         background-color: green;
-        }
+    }
+</style>
+</style>
 
-    </style>
-    </style>
-    <HEAD>
-        <meta charset="UTF-8" />
-        <meta name="viewport" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <!--- Dynamically change title to match the current stock-->
-        <title>
-            Buy {STOCKNAME} | Stock Wolves
-        </title>
-        <link rel="icon" href="/images/favicon.png" />
-        <link rel="stylesheet" href="/css/common.css" />
-    </HEAD>
-    <BODY>
-        <div class="topbar">
-            <div class="topbarLeft">
-                <a>Enter Contact mail ID here</a>
-                <a>+91 9876543210</a>
-            </div>
-            <div class="topbarRight">
-                <!-- REMOVE THE APPROPRIATE TAGS 
+<HEAD>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--- Dynamically change title to match the current stock-->
+    <title>
+        Buy {STOCKNAME} | Stock Wolves
+    </title>
+    <link rel="icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/css/common.css" />
+</HEAD>
+
+<BODY>
+    <div class="topbar">
+        <div class="topbarLeft">
+            <a>Enter Contact mail ID here</a>
+            <a>+91 9876543210</a>
+        </div>
+        <div class="topbarRight">
+            <!-- REMOVE THE APPROPRIATE TAGS 
                         WHILE MAKING THE PAGE -->
-                <div class="search-container">
-                    <form action="/php/search.php">
-                        <input type="text" id="searchBox" placeholder="Search for stocks" name="search" />
-                        <input type="image" src="/images/search_icon.png" id="searchButton" />
-                    </form>
-                </div>
-                <a href="signup.html">Sign Up</a>
-                <a href="login.html">Sign In</a>
-                <a href="about.html#faq">FAQ</a>
+            <div class="search-container">
+                <form action="/php/search.php">
+                    <input type="text" id="searchBox" placeholder="Search for stocks" name="search" />
+                    <input type="image" src="/images/search_icon.png" id="searchButton" />
+                </form>
             </div>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Sign In</a>
+            <a href="about.html#faq">FAQ</a>
         </div>
+    </div>
 
-        <div class="titleBar">
-            <img src="/images/wolf_logo.png" alt="" />
-            <a href="index.html">Stock Simulator or something</a>
-        </div>
+    <div class="titleBar">
+        <img src="/images/wolf_logo.png" alt="" />
+        <a href="index.html">Stock Simulator or something</a>
+    </div>
 
-        <div id="big_div">
-                <table border="1" id="mytable">
-                    <tr>
-                        <th>Date</th>
-                        <th>Variant</th>
-                        <th>Movement</th>
-                        <th>From</th>
-                        <th>To</th>
-                        <th>Quantity</th>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    
-                </table>
-                <center>
-            <div id="box1" style = "float:left; width: 20%;" >
-                <b><u>Stock Information:</b></u><br><br>
-                Opening: $566.6<br>
-                Previous close: $459.8<br>
-                Current price: $601<br>
-                Average (10-day): $479.67<br>
-                Market cap: $10B <br>
+    <div id="big_div">
+        <table border="1" id="mytable">
+            <tr>
+                <th>Date</th>
+                <th>Variant</th>
+                <th>Movement</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+        </table>
+        <center>
+            <div id="box1" style="float:left; width: 20%;">
+                <b><u>Stock Information:</b></u><br><br> Opening: $566.6<br> Previous close: $459.8<br> Current price: $601<br> Average (10-day): $479.67<br> Market cap: $10B <br>
             </div>
-            
-            <div id="box2" style = "float:left; width: 20%;">
-            
+
+            <div id="box2" style="float:left; width: 20%;">
+
                 <b>Shares Owned : 100</b><br><br>
-                <input type ="button" id="button1" value=" + "></input>  45  <input type ="button" id="button1" value=" - "></input>   <input type ="button" id="button1" value="  Buy  "></input><br><br>
-                <input type ="button" id="button1" value=" + "></input>  45  <input type ="button" id="button1" value=" - "></input>   <input type ="button" id="button1" value="  Sell  "></input><br><br>
+                <input type="button" id="button1" value=" + "></input> 45 <input type="button" id="button1" value=" - "></input> <input type="button" id="button1" value="  Buy  "></input><br><br>
+                <input type="button" id="button1" value=" + "></input> 45 <input type="button" id="button1" value=" - "></input> <input type="button" id="button1" value="  Sell  "></input><br><br>
             </div>
         </center>
-            
-            <div id="svg_div" >
-                <svg id="sen" viewBox="-85 0 270 250" class="chart">
+
+        <div id="svg_div">
+            <svg id="sen" viewBox="-85 0 270 250" class="chart">
                     <rect x="5" y="0" width="80" height="40" style="stroke: #0086b3; fill: #ccf2ff"></rect>
                     <line stroke-dasharray="2,2" x1="5" y1="10" x2="85" y2="10" style="stroke:#0086b3;stroke-width:0.5"></line>
                     <line stroke-dasharray="2,2" x1="5" y1="20" x2="85" y2="20" style="stroke:#0086b3;stroke-width:0.5"></line>
@@ -223,8 +227,9 @@
                 ></polyline>
                 <text x="78" y="38" font-family="30" font-size="2.4" fill="#000000">40</text>
                 </svg>
-            </div>
+        </div>
         <script rel="homepage.js" href="/home/Desktop/WebTechProject/js"></script>
-        </div> 
-    </BODY>
-</HTML> 
+    </div>
+</BODY>
+
+</HTML>
