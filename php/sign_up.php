@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $pswd = test_input($_POST["password"]);
     if(!preg_match("/^[0-9a-zA-Z]+$/")) {
-        $usernameErr1= "Only numbers and letters allowed"
+        $pswdErr1= "Only numbers and letters allowed"
     }
   }
 }
