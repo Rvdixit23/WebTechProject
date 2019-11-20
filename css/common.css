@@ -1,137 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-* {
-    font-family: "Roboto", sans-serif;
-}
-
-*,
-html {
+.brand {
+    font-family: "Lato", sans-serif;
+    color: grey;
+    font-size: 24px !important;
     margin: 0px;
-    /* If something is wrong, it might be this css */
-    padding: 0px;
-}
-
-
-/* ---Top Bar--- */
-
-.topbar {
-    background-color: gray;
-    overflow: hidden;
-    color: lightgreen;
-}
-
-.topbar a {
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    font-size: 18px;
-    color: white;
-    padding: 15px;
-    transition: all 0.3s ease;
-}
-
-.topbar a:hover {
-    background-color: limegreen;
-}
-
-.topbarRight a:active {
-    background-color: green;
-}
-
-.topbarLeft a {
-    float: left;
-    /* margin-right: 100px; */
-}
-
-.topbarRight a {
-    float: right;
-}
-
-
-/* ---Title Bar--- */
-
-.titleBar * {
-    background-color: white;
-    color: #4cbf50;
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
-    overflow: hidden;
-    font-weight: bold;
-    height: 40px;
-    text-align: center;
-    image-resolution: 32px;
-    display: block;
-    padding: 15px;
-    font-size: 30px;
-    animation: titleAni 5s linear 2s infinite alternate;
-}
-
-.titleBar>img {
-    float: right;
-    height: inherit/2;
-    width: auto;
-}
-
-@keyframes titleAni {
-    0% {
-        background-color: #d8d3d3;
-        left: 0px;
-        top: 0px;
-    }
-    25% {
-        background-color: white;
-        left: 200px;
-        top: 0px;
-    }
-    50% {
-        background-color: #d8d3d3;
-        left: 200px;
-        top: 200px;
-    }
-    75% {
-        background-color: white;
-        left: 0px;
-        top: 200px;
-    }
-    100% {
-        background-color: #d8d3d3;
-        left: 0px;
-        top: 0px;
-    }
-}
-
-
-/* ---Search Button--- */
-
-.search-container {
-    float: right;
-    background-color: gray;
-    font-size: 28px;
-}
-
-#searchBox {
-    height: 28px;
-    margin-top: 7px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    width: 200px;
-    font-size: 16px;
-    text-indent: 0.5em;
-}
-
-#searchButton {
-    float: right;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    height: 35px;
-    width: 35px;
 }
 
 body {
-    /* background-image: url("/images/background3.jpg"); */
     background-image: linear-gradient(180deg, black, rgb(1, 63, 1));
     height: 100%;
     background-position: top center;
@@ -140,5 +14,4 @@ body {
     background-attachment: fixed;
     z-index: -1;
     max-width: 100%;
-    /* background: rgba(0,0,0,.5); */
 }
