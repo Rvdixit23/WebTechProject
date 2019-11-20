@@ -1,30 +1,16 @@
-#signIn {
-    background-color: white;
+#login-heading {
     color: #4cbf50;
-    font-family: "Roboto", sans-serif;
-    text-decoration: underline;
-    overflow: hidden;
-    font-weight: bold;
-
     text-align: center;
-    image-resolution: 32px;
-    display: block;
-    padding: 15px;
-    font-size: 30px;
 }
 
 form#login {
     text-align: center;
     border-radius: 5px;
-    background-color: rgba(216, 211, 211, 0.623);
+    background-color: darkslategrey;
     padding: 0.5%;
     width: 30%;
     margin: auto;
     border: 5%;
-}
-
-.formDiv {
-    display: inline-block;
 }
 
 .inputBoxes > input {
