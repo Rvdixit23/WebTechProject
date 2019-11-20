@@ -1,18 +1,19 @@
 document.body.onload = start;
 var sensex = [300, 150, 200, 100, 50, 75, 200];
 var nifty = [100, 200, 50, 75, 30, 60, 250];
-var barg = [80, 70, 50, 20];
+var barg = [80, 70, 50, 20, 30];
 var sencount = 1.5;
 var nifcount = 1.5;
 var timer = 0;
 var senobj = document.getElementById("sensexpoly");
 var senstr = "";
 var news = [
-    "apple has messed its new product",
-    "samsung fold is a joke",
-    "oneplus phones are descent",
-    "pixel 4 is the most buggy phone",
-    "vivo is copying the other brands"
+    "Infosys fall not found its edge yet",
+    "Apple have been leading this week",
+    "Wallmart influences India now",
+    "RBI supercedes DFHL",
+    "Sensex zooms 23%",
+    "Oneplus soars in market"
 ];
 sensexInsert();
 function start() {
@@ -54,33 +55,35 @@ function niftyInsert() {
     }
 }
 function barAssign() {
-    if (timer % 10 == 0 && barg.length) {
-        var svg = document.getElementById("sen");
-        if (timer / 10 == 1) {
-            var barobj = document.getElementById("bar1");
-            var b = barg.shift() / 2;
-            barobj.setAttribute("height", b);
-            barobj.setAttribute("y", 170 - b);
-        } else if (timer / 10 == 2) {
-            var barobj = document.getElementById("bar2");
-            var b = barg.shift() / 2;
-            barobj.setAttribute("height", b);
-            barobj.setAttribute("y", 170 - b);
-        } else if (timer / 10 == 3) {
-            var barobj = document.getElementById("bar3");
-            var b = barg.shift() / 2;
-            barobj.setAttribute("height", b);
-            barobj.setAttribute("y", 170 - b);
-        } else if (timer / 10 == 4) {
-            var barobj = document.getElementById("bar4");
-            var b = barg.shift() / 2;
-            barobj.setAttribute("height", b);
-            barobj.setAttribute("y", 170 - b);
-        }
+    var svg = document.getElementById("sen");
+    if (timer % 20 == 5) {
+        var barobj = document.getElementById("bar1");
+        var b = barg.shift() / 2;
+        barobj.setAttribute("height", b);
+        barobj.setAttribute("y", 50 - b);
+        barg.push(b*2);
+    } else if (timer % 20 == 10) {
+        var barobj = document.getElementById("bar2");
+        var b = barg.shift() / 2;
+        barobj.setAttribute("height", b);
+        barobj.setAttribute("y", 50 - b);
+        barg.push(b*2);
+    } else if (timer % 20 == 15) {
+        var barobj = document.getElementById("bar3");
+        var b = barg.shift() / 2;
+        barobj.setAttribute("height", b);
+        barobj.setAttribute("y", 50 - b);
+        barg.push(b*2);
+    } else if (timer % 20 == 0) {
+        var barobj = document.getElementById("bar4");
+        var b = barg.shift() / 2;
+        barobj.setAttribute("height", b);
+        barobj.setAttribute("y", 50 - b);
+        barg.push(b*2);
     }
 }
 function headLines() {
-    if (news.length && (timer % 100 == 0 || timer == 10)) {
+    if (news.length && (timer % 20 == 0 || timer == 10)) {
         var t1 = document.getElementById("hd1");
         var t2 = document.getElementById("hd2");
         var t3 = document.getElementById("hd3");
