@@ -17,6 +17,7 @@ var news = [
 ];
 sensexInsert();
 function start() {
+    signFunc();
     setInterval("TIMER()", 50); //in milliseconds
 }
 function pointConvert(a) {
@@ -96,4 +97,59 @@ function headLines() {
         t1.innerHTML = "-> " + store;
         news.push(store);
     }
+}
+
+function signFunc()
+{
+    var div=document.getElementById("topbarRight")
+    var faq=document.createElement("a");
+    faq.id='faq';
+    faq.innerHTML='FAQ';
+    faq.href='about.html';
+    div.appendChild(faq);
+
+   if(document.cookie=="")
+   {
+    var signup=document.createElement("a");
+    signup.id='sup';
+    signup.href='signup.html';
+    signup.innerHTML='Sign Up';
+    var login=document.createElement("a");
+    login.id='lin';
+    login.href='signup.html';
+    login.innerHTML='Sign In';
+    div.appendChild(signup);
+    console.log('donA');
+    div.appendChild(login);
+    console.log('donB');
+    }
+   else
+   {
+    var hello=document.createElement("a");
+    var cook=document.cookie.split('=');
+    hello.innerHTML='Hi, '+cook[1];
+    hello.id='hello';
+    hello.href='index.html'
+    var signout=document.createElement("a");
+    signout.id='sout';
+    signout.onclick=clearCookie;
+    signout.href='index.html';
+    signout.innerHTML='Sign Out';
+    var calcer=document.createElement("a");
+    calcer.id="calculator";
+    calcer.href="calculator.html";
+    calcer.innerHTML="Calculator";
+    var transaction=document.createElement("a");
+    transaction.id="transaction";
+    transaction.href="transaction.html";
+    transaction.innerHTML="Transaction";
+
+    div.appendChild(calcer);
+    div.appendChild(transaction);
+    div.appendChild(signout);
+   }
+}
+function clearCookie()
+{
+    document.cookie==""
 }
