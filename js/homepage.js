@@ -116,7 +116,7 @@ function signFunc()
     signup.innerHTML='Sign Up';
     var login=document.createElement("a");
     login.id='lin';
-    login.href='signup.html';
+    login.href='login.html';
     login.innerHTML='Sign In';
     div.appendChild(signup);
     console.log('donA');
