@@ -10,24 +10,52 @@
         <link rel="icon" href="/images/favicon.png" />
         <link rel="stylesheet" href="/css/common.css" />
         <style>
-            table#mytable {
-                border-collapse: collapse;
-                border: 3px solid black;
-                width: 75%;
-                height: 75%;
+            #mytable1 {
+                color: rgb(76, 191, 80);
+                font-family: Helvetica, Arial, sans-serif;
+                width: 70%;
+                height: 40%;
+                margin-left: auto;
+                margin-right: auto;
+                border: 2px solid rgb(76, 191, 80);
+                border-radius: 8px;
             }
             th {
-                height: 50px;
-                background-color: magenta;
-                color: white;
+                border: 1px solid rgb(76, 191, 80);
+                transition: all 0.3s;
+                border-radius: 3px;
+                height: 40px;
+                color: black;
             }
+            
+            th {
+                background: greenyellow;
+                /* Darken header a bit */
+                font-weight: bold;
+                transition: 0.3s;
+            }
+            
             td {
-                height: 32px;
-                padding: 5px;
+                background: #FAFAFA;
+                text-align: center;
+                padding-top: 15px ;
+                padding-bottom: 15px;
+                transition: 0.275s;
             }
-
-            tr:hover {
-                background-color: chartreuse;
+            /* Cells in even rows (2,4,6...) are one color */
+            
+            tr:nth-child(even) td {
+                background: #F1F1F1;
+            }
+            /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+            
+            tr:nth-child(odd) td {
+                background: #FEFEFE;
+            }
+            
+            tr td:hover {
+                background: #666;
+                color: #FFF;
             }
         </style>
     </HEAD>
@@ -58,10 +86,10 @@
         </div>
 
         <h3>
-            <font color="blue"><u>Top performing stocks in the last quarter:</u></font><br><br>
+            <center><font color="greenyellow" size="+2"><u>Top performing stocks :</u></font><br><br></center>
         </h3>
         <div style="overflow-x:auto;">
-            <table border="1" id="mytable">
+            <table border="1" id="mytable1">
                 <tr>
                     <th>Company name</th>
                     <th>Opening price</th>
@@ -113,17 +141,17 @@
                 </tr>
                 <tr>
                     <td>Infosys</td>
-                    <td>$</td>
-                    <td>$</td>
-                    <td>$</td>
-                    <td>$</td>
+                    <td>$2000</td>
+                    <td>$1750</td>
+                    <td>$250</td>
+                    <td>$3897</td>
                 </tr>
                 <tr>
-                    <td>$</td>
-                    <td>$</td>
-                    <td>$</td>
-                    <td>$</td>
-                    <td>$</td>
+                    <td>SAP</td>
+                    <td>$240</td>
+                    <td>$340</td>
+                    <td>$100</td>
+                    <td>$210</td>
                 </tr>
             </table>
         </div>
