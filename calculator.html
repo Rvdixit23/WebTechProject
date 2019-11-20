@@ -21,12 +21,12 @@
 
     <body>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="/images/wolf_logo.png" alt="Logo" style="width:30px;" />
             </a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active brand">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="index.html">
                         Stock Wolves
                     </a>
                 </li>
@@ -58,54 +58,78 @@
                 <button class="btn btn-success" type="submit">Search</button>
             </form>
         </nav>
-        
+
         <br />
-        <div class="main">
-            <form action="" name="form">
-                <input class="textview" name="textview" />
-            </form>
-            <table>
-                <tr>
-                    <td><input class="button" type="button" value="AC" /></td>
-                    <td><input class="button" type="button" value="C" /></td>
-                    <td><input class="button" type="button" value="/" /></td>
-                    <td><input class="button" type="button" value="*" /></td>
-                </tr>
-                <tr>
-                    <td><input class="button" type="button" value="7" /></td>
-                    <td><input class="button" type="button" value="8" /></td>
-                    <td><input class="button" type="button" value="9" /></td>
-                    <td><input class="button" type="button" value="-" /></td>
-                </tr>
-                <tr>
-                    <td><input class="button" type="button" value="4" /></td>
-                    <td><input class="button" type="button" value="5" /></td>
-                    <td><input class="button" type="button" value="6" /></td>
-                    <td><input class="button" type="button" value="+" /></td>
-                </tr>
-                <tr>
-                    <td><input class="button" type="button" value="1" /></td>
-                    <td><input class="button" type="button" value="2" /></td>
-                    <td><input class="button" type="button" value="3" /></td>
-                    <td rowspan="2"><input class="button" type="button" value="=" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input class="button" type="button" value="0" /></td>
-                    <td><input class="button" type="button" value="." /></td>
-                </tr>
-            </table>
+        <br /><br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3 simple-calc-column">
+                    <br />
+                    <h1 class="h1" id="simple-calc-heading" style="color: limegreen;">Simple Calculator</h1>
+                    <br /><br /><br />
+                    <div class="simple-calculator">
+                        <form action="" name="form">
+                            <input class="textview" name="textview" />
+                        </form>
+
+                        <br />
+                        <table>
+                            <tr>
+                                <td><input class="button" type="button" value="AC" /></td>
+                                <td><input class="button" type="button" value="C" /></td>
+                                <td><input class="button" type="button" value="/" /></td>
+                                <td><input class="button" type="button" value="*" /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button" type="button" value="7" /></td>
+                                <td><input class="button" type="button" value="8" /></td>
+                                <td><input class="button" type="button" value="9" /></td>
+                                <td><input class="button" type="button" value="-" /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button" type="button" value="4" /></td>
+                                <td><input class="button" type="button" value="5" /></td>
+                                <td><input class="button" type="button" value="6" /></td>
+                                <td><input class="button" type="button" value="+" /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button" type="button" value="1" /></td>
+                                <td><input class="button" type="button" value="2" /></td>
+                                <td><input class="button" type="button" value="3" /></td>
+                                <td rowspan="2"><input class="button" type="button" value="=" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input class="button" type="button" value="0" /></td>
+                                <td><input class="button" type="button" value="." /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-5 equity-calc-column">
+                    <br />
+                    <h1 class="h1" id="equity-calc-heading" style="color: limegreen;">Equity Calculator</h1>
+                    <br />
+                    <br />
+                    <div id="equity">
+                        <label>Stock Value:</label>
+                        <input type="text" id="stock" value="" /> <br /><br />
+                        <label>Number of Shares:</label>
+                        <input type="text" id="number" value="" /> <br /><br />
+                        <label>Rate:</label>
+                        <input type="text" id="rate" value="" /> <br /><br />
+                        <label>Time:</label>
+                        <input type="text" id="time" value="" /> <br /><br /><br />
+                        <button id="solve" onclick="solve()">Calculate</button> <br /><br />
+                        <label>Result:</label>
+                        <input type="text" id="final" value="" /> <br /><br />
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
         </div>
 
         <br />
-
-        <div id="equity">
-            <input type="textbox" id="stock" value="" />STOCK_VALUE<br /><br />
-            <input type="textbox" id="number" value="" />NUMBER OF SHARES<br /><br />
-            <input type="textbox" id="rate" value="" />RATE<br /><br />
-            <input type="textbox" id="time" value="" />TIME<br /><br />
-            <input type="textbox" id="final" value="" />FINAL VALUE<br /><br />
-            <button id="solve" onclick="solve()">SOLVE</button>
-        </div>
 
         <script rel="text/javascipt" src="js/calculator.js"></script>
 
