@@ -1,82 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>
+            Log in | Stock Wolves
+        </title>
+        <link rel="icon" href="/images/favicon.png" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/login.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-        Log in | Stock Wolves
-    </title>
-    <link rel="icon" href="/images/favicon.png" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/login.css" />
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">
-            <img src="/images/wolf_logo.png" alt="Logo" style="width:30px;" />
-        </a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active brand">
-                <a class="nav-link" href="#">
+    <body onload="loggedIn()">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/wolf_logo.png" alt="Logo" style="width:30px;" />
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active brand">
+                    <a class="nav-link" href="index.html">
                         Stock Wolves
                     </a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="signup.html">Signup</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html#faq">FAQ</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="navbar-logout">
+
+                </li>
+                <li class="nav-item" id="navbar-signup">
+                    <a class="nav-link" href="signup.html">Signup</a>
+                </li>
+                <li class="nav-item" id="navbar-login">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html#faq">FAQ</a>
+                </li>
+                <li class="nav-item dropdown" id="navbar-account">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         My Account
                     </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="portfolio.html">My Portfolio</a>
-                    <a class="dropdown-item" href="transaction.html">My Transactions</a>
-                    <a class="dropdown-item" href="calculator.html">Calculator</a>
-                </div>
-            </li>
-        </ul>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="portfolio.html">My Portfolio</a>
+                        <a class="dropdown-item" href="transaction.html">My Transactions</a>
+                        <a class="dropdown-item" href="calculator.html">Calculator</a>
+                    </div>
+                </li>
+            </ul>
 
-        <form class="form-inline" action="/php/search.php">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" />
-            <button class="btn btn-success" type="submit">Search</button>
-        </form>
-    </nav>
-
-    <div class="container-fluid">
-        <br />
-        <br />
-        <h1 id="login-heading" class="display-4">Log In</h1>
-        <br />
-        <br />
-        <div class="fromDiv">
-            <form id="login" action="/php/login.php" method="GET">
-                <div class="inputBoxes">
-                    <br />
-                    <label for="EmailID">Email ID</label><br />
-                    <input type="text" name="emailID" placeholder="Email ID" /><br /><br /><br />
-                    <label for="passwd">Password</label><br />
-                    <input type="password" name="password" , placeholder="Password" /><br /><br />
-                    <input type="submit"><br /><br />
-                    <a href="signup.html" style="color: greenyellow;">Don't have an account?</a><br />
-                </div>
+            <form class="form-inline" action="/php/search.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+                <button class="btn btn-success" type="submit">Search</button>
             </form>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+        </nav>
+        <script src="/js/common.js"></script>
 
+        <div class="container-fluid">
+            <br />
+            <br />
+            <h1 id="login-heading" class="display-4">Log In</h1>
+            <br />
+            <br />
+            <div class="fromDiv">
+                <form id="login" action="/php/login.php" method="GET">
+                    <div class="inputBoxes">
+                        <br />
+                        <label for="EmailID">Email ID</label><br />
+                        <input type="text" name="emailID" placeholder="Email ID" /><br /><br /><br />
+                        <label for="passwd">Password</label><br />
+                        <input type="password" name="password" , placeholder="Password" /><br /><br />
+                        <input type="submit" /><br /><br />
+                        <a href="signup.html" style="color: greenyellow;">Don't have an account?</a><br />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

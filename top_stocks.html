@@ -1,313 +1,207 @@
 <!DOCTYPE html>
-<HTML lang="en">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>
+            Top Performing Stocks | Stock Wolves
+        </title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
 
-<HEAD>
-    <meta charset="UTF-8" />
-    <meta name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-        Top Performing Stocks | Stock Wolves
-    </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="icon" href="/images/favicon.png" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/top_stocks.css" />
+    </head>
 
-    <link rel="icon" href="/images/favicon.png" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <style>
-        #mytable1 {
-            color: rgb(76, 191, 80);
-            font-family: Helvetica, Arial, sans-serif;
-            width: 70%;
-            height: 40%;
-            margin-left: auto;
-            margin-right: auto;
-            border: 2px solid rgb(76, 191, 80);
-            border-radius: 8px;
-        }
-        
-        th {
-            border: 1px solid rgb(76, 191, 80);
-            transition: all 0.3s;
-            border-radius: 3px;
-            height: 40px;
-            color: black;
-            padding: 10px;
-            padding-left: 60px;
-        }
-        
-        th {
-            background: greenyellow;
-            /* Darken header a bit */
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        
-        td {
-            background: #FAFAFA;
-            text-align: center;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            transition: 0.275s;
-        }
-        /* Cells in even rows (2,4,6...) are one color */
-        
-        tr:nth-child(even) td {
-            background: #F1F1F1;
-        }
-        /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
-        
-        tr:nth-child(odd) td {
-            background: #FEFEFE;
-        }
-        
-        tr td:hover {
-            background: #666;
-            color: #FFF;
-        }
-    </style>
-</HEAD>
+    <body onload="loggedIn()">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/wolf_logo.png" alt="Logo" style="width:30px;" />
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active brand">
+                    <a class="nav-link" href="index.html">
+                        Stock Wolves
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="navbar-logout"></li>
+                <li class="nav-item" id="navbar-signup">
+                    <a class="nav-link" href="signup.html">Signup</a>
+                </li>
+                <li class="nav-item" id="navbar-login">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html#faq">FAQ</a>
+                </li>
+                <li class="nav-item dropdown" id="navbar-account">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        My Account
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="portfolio.html">My Portfolio</a>
+                        <a class="dropdown-item" href="transaction.html">My Transactions</a>
+                        <a class="dropdown-item" href="calculator.html">Calculator</a>
+                    </div>
+                </li>
+            </ul>
 
-<BODY>
-    <script>
-        function myfun() {
-            document.getElementById("demo").innerHTML = Math.random() * 1000;
-            document.getElementById("demo1").innerHTML = Math.random() * 1000;
-            document.getElementById("demo2").innerHTML = Math.random() * 1000;
-            document.getElementById("demo3").innerHTML = Math.random() * 1000;
-            document.getElementById("demo4").innerHTML = Math.random() * 1000;
-            document.getElementById("demo5").innerHTML = Math.random() * 1000;
-            document.getElementById("demo6").innerHTML = Math.random() * 1000;
-            document.getElementById("demo7").innerHTML = Math.random() * 1000;
-            document.getElementById("demo8").innerHTML = Math.random() * 1000;
-            document.getElementById("demo9").innerHTML = Math.random() * 1000;
-            document.getElementById("demo10").innerHTML = Math.random() * 1000;
-            document.getElementById("demo11").innerHTML = Math.random() * 1000;
-            document.getElementById("demo12").innerHTML = Math.random() * 1000;
-            document.getElementById("demo13").innerHTML = Math.random() * 1000;
-            document.getElementById("demo14").innerHTML = Math.random() * 1000;
-            document.getElementById("demo15").innerHTML = Math.random() * 1000;
-            document.getElementById("demo16").innerHTML = Math.random() * 1000;
-            document.getElementById("demo17").innerHTML = Math.random() * 1000;
-            document.getElementById("demo18").innerHTML = Math.random() * 1000;
-            document.getElementById("demo19").innerHTML = Math.random() * 1000;
-            document.getElementById("demo20").innerHTML = Math.random() * 1000;
-            document.getElementById("demo21").innerHTML = Math.random() * 1000;
-            document.getElementById("demo22").innerHTML = Math.random() * 1000;
-            document.getElementById("demo23").innerHTML = Math.random() * 1000;
-            document.getElementById("demo24").innerHTML = Math.random() * 1000;
-            document.getElementById("demo25").innerHTML = Math.random() * 1000;
-            document.getElementById("demo26").innerHTML = Math.random() * 1000;
-            document.getElementById("demo27").innerHTML = Math.random() * 1000;
-            document.getElementById("demo28").innerHTML = Math.random() * 1000;
-            document.getElementById("demo29").innerHTML = Math.random() * 1000;
-            document.getElementById("demo30").innerHTML = Math.random() * 1000;
-            document.getElementById("demo31").innerHTML = Math.random() * 1000;
-        }
-    </script>
-
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="index.html">
-            <img src="/images/wolf_logo.png" alt="Logo" style="width:30px;" />
-        </a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active brand">
-                <a class="nav-link" href="index.html">
-                    Stock Wolves
-                </a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="signup.html">Signup</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html#faq">FAQ</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    My Account
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="portfolio.html">My Portfolio</a>
-                    <a class="dropdown-item" href="transaction.html">My Transactions</a>
-                    <a class="dropdown-item" href="calculator.html">Calculator</a>
-                </div>
-            </li>
-        </ul>
-
-        <form class="form-inline" action="/php/search.php">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" />
-            <button class="btn btn-success" type="submit">Search</button>
-        </form>
-    </nav>
-
-    <h3>
-        <center>
-            <font color="greenyellow" size="+2"><u>Top performing stocks :</u></font><br><br></center>
-    </h3>
-    <div style="overflow-x:auto;">
-        <table border="1" id="mytable1">
-            <tr>
-                <th>Company name</th>
-                <th>Opening price</th>
-                <th>Current price</th>
-                <th>Price movement</th>
-                <th>Previous Closing price</th>
-            </tr>
-            <tr>
-                <td>Apple</td>
-                <td onclick="myfun()">
-                    <p id="demo" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo1" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo2" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo3" class="hello"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>Amazon</td>
-                <td onclick="myfun()">
-                    <p id="demo4" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo5" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo6" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo7" class="hello"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>Google</td>
-                <td onclick="myfun()">
-                    <p id="demo8" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo9" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo10" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo11" class="hello"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>SpaceX</td>
-                <td onclick="myfun()">
-                    <p id="demo12" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo13" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo14" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo15" class="hello"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>Blue Origin</td>
-                <td onclick="myfun()">
-                    <p id="demo16" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo17" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo18" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo19" class="hello"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>Cognizant</td>
-                <td onclick="myfun()">
-                    <p id="demo20" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo21" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo22" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo23" class="hello"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>Infosys</td>
-                <td onclick="myfun()">
-                    <p id="demo24" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo25" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo26" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo27" class="hello"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>SAP</td>
-                <td onclick="myfun()">
-                    <p id="demo28" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo29" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo30" class="hello"></p>
-                </td>
-                <td onclick="myfun()">
-                    <p id="demo31" class="hello"></p>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <left><svg id="sen" viewBox="-100 -10 300 250" class="chart">
+            <form class="form-inline" action="/php/search.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </nav>
+        <script src="/js/common.js"></script>
+        <br />
+        <h1 class="display-4" style="text-align: center; color: mediumseagreen;">Top Performing Stocks</h1>
+        <br />
+        <div style="overflow-x:auto;">
+            <table border="1" id="mytable1">
+                <tr>
+                    <th>Company name</th>
+                    <th>Opening price</th>
+                    <th>Current price</th>
+                    <th>Price movement</th>
+                    <th>Previous Closing price</th>
+                </tr>
+                <tr>
+                    <td class="company-name">Apple</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="company-name">Amazon</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="company-name">Google</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="company-name">SpaceX</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="company-name">Blue Origin</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="company-name">Cognizant</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="company-name">Infosys</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="company-name">SAP</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <script src="/js/top_stocks.js"></script>
+        <left
+            ><svg id="sen" viewBox="-100 -10 300 250" class="chart">
                 <rect x="5" y="0" width="80" height="40" style="stroke: #0086b3; fill: #ccf2ff"></rect>
-                <line stroke-dasharray="2,2" x1="5" y1="10" x2="85" y2="10" style="stroke:#0086b3;stroke-width:0.5"></line>
-                <line stroke-dasharray="2,2" x1="5" y1="20" x2="85" y2="20" style="stroke:#0086b3;stroke-width:0.5"></line>
-                <line stroke-dasharray="2,2" x1="5" y1="30" x2="85" y2="30" style="stroke:#0086b3;stroke-width:0.5"></line>
-                <line stroke-dasharray="2,2" x1="5" y1="40" x2="85" y2="40" style="stroke:#0086b3;stroke-width:0.5"></line>
+                <line
+                    stroke-dasharray="2,2"
+                    x1="5"
+                    y1="10"
+                    x2="85"
+                    y2="10"
+                    style="stroke:#0086b3;stroke-width:0.5"
+                ></line>
+                <line
+                    stroke-dasharray="2,2"
+                    x1="5"
+                    y1="20"
+                    x2="85"
+                    y2="20"
+                    style="stroke:#0086b3;stroke-width:0.5"
+                ></line>
+                <line
+                    stroke-dasharray="2,2"
+                    x1="5"
+                    y1="30"
+                    x2="85"
+                    y2="30"
+                    style="stroke:#0086b3;stroke-width:0.5"
+                ></line>
+                <line
+                    stroke-dasharray="2,2"
+                    x1="5"
+                    y1="40"
+                    x2="85"
+                    y2="40"
+                    style="stroke:#0086b3;stroke-width:0.5"
+                ></line>
                 <text x="10" y="38" font-family="30" font-size="2.5" fill="#000000">RED - SENSEX, GREEN - NIFTY</text>
                 <text x="78" y="38" font-family="30" font-size="4" fill="#000000">40</text>
                 <text x="11" y="5" font-family="30" font-size="3" fill="#000000">PERIOD - 1 WEEK</text>
                 <text x="78" y="22" font-family="30" font-size="2.4" fill="#000000">20</text>
                 <text x="78" y="5" font-family="30" font-size="2.4" fill="#000000">40</text>
-            <polyline
-                id="sensexpoly"
-                fill="none"
-                stroke="#ff6347"
-                stroke-width="0.8"
-                points="10 22 20 5 30 9 40 30 55 33 60 34 80 10"
-            ></polyline>
-            <polyline
-                id="niftypoly"
-                fill="none"
-                stroke="rgb(60, 179, 113)"
-                stroke-width="0.8"
-                points="10 25 20 15 30 30 40 27.5 50 32 60 29 70 10"
-            ></polyline>
-            <text x="78" y="38" font-family="30" font-size="2.4" fill="#000000">40</text>
-        </svg></left>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</BODY>
-
-</HTML>
+                <polyline
+                    id="sensexpoly"
+                    fill="none"
+                    stroke="#ff6347"
+                    stroke-width="0.8"
+                    points="10 22 20 5 30 9 40 30 55 33 60 34 80 10"
+                ></polyline>
+                <polyline
+                    id="niftypoly"
+                    fill="none"
+                    stroke="rgb(60, 179, 113)"
+                    stroke-width="0.8"
+                    points="10 25 20 15 30 30 40 27.5 50 32 60 29 70 10"
+                ></polyline>
+                <text x="78" y="38" font-family="30" font-size="2.4" fill="#000000">40</text>
+            </svg></left
+        >
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

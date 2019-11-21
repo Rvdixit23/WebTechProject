@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="/css/common.css" />
         <link rel="stylesheet" href="/css/about.css" />
     </head>
-    <body>
+    <body onload="loggedIn()">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <a class="navbar-brand" href="index.html">
                 <img src="/images/wolf_logo.png" alt="Logo" style="width:30px;" />
@@ -31,16 +31,17 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item" id="navbar-logout"></li>
+                <li class="nav-item" id="navbar-signup">
                     <a class="nav-link" href="signup.html">Signup</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="navbar-login">
                     <a class="nav-link" href="login.html">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html#faq">FAQ</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" id="navbar-account">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         My Account
                     </a>
@@ -57,6 +58,7 @@
                 <button class="btn btn-success" type="submit">Search</button>
             </form>
         </nav>
+        <script src="/js/common.js"></script>
 
         <div class="container-fluid">
             <br />
@@ -98,29 +100,56 @@
                     <br />
 
                     <h1 class="display-4" id="faq">FAQ</h1>
-                    <p class="question">What do you understand by Securities Market? What are the different types of securities market?</p>
-        <p class="answer">Security market is a market where securities are issued and traded. It is the market for different types of securities namely: Debt, Equity and Derivatives.</p>
-        
-        <p class="question">What do you mean by Derivatives? </p>
-        <p class="answer">The word derivative refers to a variable which has been derived from another variable. Thus derivatives have no value of their own as they derive their value from the value of some other assets which is known as underlying asset. They are specialized contracts which signify an agreement to buy or sell the underlying asset of the derivate up to a certain time in the future at a predetermined price. The value of the contract depends on the expiry period and also on the price of the underlying asset.</p>
-        
-        <p class="question">What is Beta of an asset?</p>
-        <p class="answer">Beta of an asset is a way of measuring systematic risk of an asset. It shows how price of a security responds to changes in market price. It indicates the extent of movement of the returns of the stock with respect to the movement of market returns. Assets that are riskier than average will have Betas that exceed 1 and assets that are safer than average will have Betas lower than 1. The riskless asset will have a value of Beta=0. The Beta of the market portfolio or the average of Betas across al assets in the market is 1.</p>
-        
-        <p class="question">What are the different types of Equity Market?</p>
-        <p class="answer">Primary equity market and secondary equity market </p>
-        
-        <p class="question">What do you understand by Money Market?</p>
-        <p class="answer">Money market is the market where short term instruments of credit with a maturity period of one year or less than that are traded. Such instruments are known as near money. The borrowers of money market are traders, government, speculators and lenders in this market are commercial banks, central bank, financial institutions and insurance companies etc.        </p>
-        
-        <p class="question">What is efficient market hypothesis?</p>
-        <p class="answer">Efficient market is one where the market price of the security is an unbiased estimate of its intrinsic value.</p>
-        
-        <p class="question">What are the types of Risks?</p>
-        <p class="answer">Systematic and unsystematic risks</p>
-        
-        <p class="question">What are the essential elements of the CAPM?</p>
-        <p class="answer">Risk free rate and market risk premium</p>
+                    <p class="question">
+                        What do you understand by Securities Market? What are the different types of securities market?
+                    </p>
+                    <p class="answer">
+                        Security market is a market where securities are issued and traded. It is the market for
+                        different types of securities namely: Debt, Equity and Derivatives.
+                    </p>
+
+                    <p class="question">What do you mean by Derivatives?</p>
+                    <p class="answer">
+                        The word derivative refers to a variable which has been derived from another variable. Thus
+                        derivatives have no value of their own as they derive their value from the value of some other
+                        assets which is known as underlying asset. They are specialized contracts which signify an
+                        agreement to buy or sell the underlying asset of the derivate up to a certain time in the future
+                        at a predetermined price. The value of the contract depends on the expiry period and also on the
+                        price of the underlying asset.
+                    </p>
+
+                    <p class="question">What is Beta of an asset?</p>
+                    <p class="answer">
+                        Beta of an asset is a way of measuring systematic risk of an asset. It shows how price of a
+                        security responds to changes in market price. It indicates the extent of movement of the returns
+                        of the stock with respect to the movement of market returns. Assets that are riskier than
+                        average will have Betas that exceed 1 and assets that are safer than average will have Betas
+                        lower than 1. The riskless asset will have a value of Beta=0. The Beta of the market portfolio
+                        or the average of Betas across al assets in the market is 1.
+                    </p>
+
+                    <p class="question">What are the different types of Equity Market?</p>
+                    <p class="answer">Primary equity market and secondary equity market</p>
+
+                    <p class="question">What do you understand by Money Market?</p>
+                    <p class="answer">
+                        Money market is the market where short term instruments of credit with a maturity period of one
+                        year or less than that are traded. Such instruments are known as near money. The borrowers of
+                        money market are traders, government, speculators and lenders in this market are commercial
+                        banks, central bank, financial institutions and insurance companies etc.
+                    </p>
+
+                    <p class="question">What is efficient market hypothesis?</p>
+                    <p class="answer">
+                        Efficient market is one where the market price of the security is an unbiased estimate of its
+                        intrinsic value.
+                    </p>
+
+                    <p class="question">What are the types of Risks?</p>
+                    <p class="answer">Systematic and unsystematic risks</p>
+
+                    <p class="question">What are the essential elements of the CAPM?</p>
+                    <p class="answer">Risk free rate and market risk premium</p>
                 </div>
                 <div class="col-sm-3"></div>
             </div>

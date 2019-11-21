@@ -1,7 +1,7 @@
 function loggedIn() {
     cookie = document.cookie.split(";");
     cookie = cookie[0].split('=')
-    if (cookie[1] != "%2F") {
+    if (cookie[1]) {
         document.querySelector("#navbar-signup").removeChild(document.querySelector("#navbar-signup > a"));
         console.log("Removed Signup Button")
         document.querySelector("#navbar-login").removeChild(document.querySelector("#navbar-login > a"));
