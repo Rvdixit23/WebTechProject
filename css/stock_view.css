@@ -16,7 +16,7 @@
     padding: 35px;
     margin: 100px;
     margin-top: 50px;
-    margin-left: 300px;
+    margin-left: 470px;
     align-content: center;
 }
 
@@ -44,11 +44,15 @@ th {
     background: greenyellow;
     /* Darken header a bit */
     font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
 }
 
 td {
     background: #fafafa;
     text-align: center;
+    align-content: center;
+    transition: 0.3s;
 }
 /* Cells in even rows (2,4,6...) are one color */
 
