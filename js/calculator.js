@@ -41,3 +41,18 @@ function equal() {
         document.form.textview.value = eval(exp);
     }
 }
+
+function solve(){
+    var v1=document.getElementById("stock");
+    v1=v1.value;
+    var v2=document.getElementById("number");
+    v2=v2.value;
+    var v3=document.getElementById("rate");
+    v3=v3.value;
+    var v4=document.getElementById("time");
+    v4=v4.value;
+    var v5=v1*v2*v3*v4/100;
+    console.log(v5);
+    var final= document.getElementById("final");
+    final.value=v5;
+}

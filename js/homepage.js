@@ -115,7 +115,7 @@ function signFunc() {
     var cook = document.cookie.split(";")
     var cook = cook[0].split('=');
 
-    if (cook[1] == "%2F") {
+    if (cook[1] == "" || cook[1]=="%2F") {
         var signup = document.createElement("a");
         signup.id = 'sup';
         signup.href = 'signup.html';
