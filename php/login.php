@@ -1,25 +1,41 @@
 <?php
-$email=$pswd="";
-$pswdErr=$emailErr="";
-$pswdErr1=$emailErr1="";
-$
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["emailID"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["emailID"]);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $emailErr1 = "Invalid email format";
-    }
-  }
+  $email = $_GET['emailID'];
+  $password = $_GET['password'];
+  
+  // session_start();
 
-  if (empty($_POST["password"])) {
-    $pswdErr = "Password is required";
-  } else {
-    $pswd = test_input($_POST["password"]);
-    if(!preg_match("/^[0-9a-zA-Z]+$/")) {
-        $pswdErr1= "Only numbers and letters allowed"
-    }
+  $serverName = "localhost";
+  $serverUserName = "root";
+  $serverPassword = "";
+  $databaseName = "users";
+
+  $loggedIn = "0";
+
+  $conn = mysqli_connect($serverName, $serverUserName, $serverPassword, $databaseName);
+  if (!$conn) {
+    die("ERROR : ".mysqli_connect_error());
   }
-}
+  $sql = "SELECT username FROM users WHERE emailID = '$email' and password = '$password';";
+  $result = mysqli_query($conn ,$sql);
+  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+  // $active = $row['active'];
+
+  $count = mysqli_num_rows($result);
+  
+  
+  if($count == 1) {
+    // session_register("$email");
+    // $_SESSION['login_user'] = $email;
+    $cookie_key = "Username";
+    $cookie_value = $row['username'];
+    setcookie($cookie_key, $cookie_value, time() + (86400 * 30), "/");
+    echo "Logged in Sucessfully";
+    $loggedIn = "1";
+    
+    header("location: ../index.html");
+ }else {
+    $error = "YOUR LOGIN NAME OR PASSWORD IS INVALID";
+    echo $error;
+ }
+  setcookie("loggedIn", $loggedIn, time() + (86400 * 30), "/");
 ?>
