@@ -3,7 +3,14 @@
     padding: 0px;
 }
 
-.button {
+#simple-calc-heading {
+    text-align: center;
+}
+#equity-calc-heading {
+    text-align: center;
+}
+
+div.simple-calculator .button {
     width: 70px;
     height: 70px;
     font-size: 18px;
@@ -14,13 +21,13 @@
     color: white;
     transition: all 0.3s ease;
 }
-.button[value="0"] {
-    width: 144px;
+div.simple-calculator .button[value="0"] {
+    width: 142px;
 }
-.button[value="="] {
+div.simple-calculator .button[value="="] {
     height: 142px;
 }
-.textview {
+div.simple-calculator .textview {
     width: 280px;
     margin: 0 auto;
     display: block;
@@ -28,26 +35,24 @@
     padding: 4px;
     color: mediumseagreen;
 }
-
-.textview input button {
-    left: 22.5%;
-}
-
 table {
-    position: absolute;
+    position: relative;
     top: 22.5%;
     left: 50%;
-    transform: translateX(-50%);    
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    transform: translateX(-50%);
     align-content: center;
 }
 
-.button:hover {
+.simple-calc-column {
+    background: darkslategrey;
+}
+.equity-calc-column {
+    background: darkslategrey;
+}
+div.simple-calculator .button:hover {
     background-color: #4cbf50;
 }
-
-.button:active {
+div.simple-calculator .button:active {
     background-color: black;
 }
 
@@ -62,14 +67,18 @@ table {
     transition: all 0.3s ease;
     top: 0%;
 }
-
 #equity input {
-    border-radius: 8px;
-    height: 25px;
+    width: 360px;
+    font-size: 25px;
+    text-align: left;
+    float: right;
 }
-
+#equity label {
+    text-align: right;
+    float: left;
+}
 #solve {
-    background-color: #4CAF50; /* Green */
+    background-color: #4cbf50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -80,7 +89,6 @@ table {
     border-radius: 5px;
     transition: all 0.3s ease;
 }
-
 #solve:hover {
     background-color: limegreen;
 }

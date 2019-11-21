@@ -1,161 +1,282 @@
 <!DOCTYPE html>
 <HTML lang="en">
-    <HEAD>
-        <meta charset="UTF-8" />
-        <meta name="viewport" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>
-            Top Performing Stocks | Stock Wolves
-        </title>
-        <link rel="icon" href="/images/favicon.png" />
-        <link rel="stylesheet" href="/css/common.css" />
-        <style>
-            #mytable1 {
-                color: rgb(76, 191, 80);
-                font-family: Helvetica, Arial, sans-serif;
-                width: 70%;
-                height: 40%;
-                margin-left: auto;
-                margin-right: auto;
-                border: 2px solid rgb(76, 191, 80);
-                border-radius: 8px;
-            }
-            th {
-                border: 1px solid rgb(76, 191, 80);
-                transition: all 0.3s;
-                border-radius: 3px;
-                height: 40px;
-                color: black;
-            }
-            
-            th {
-                background: greenyellow;
-                /* Darken header a bit */
-                font-weight: bold;
-                transition: 0.3s;
-            }
-            
-            td {
-                background: #FAFAFA;
-                text-align: center;
-                padding-top: 15px ;
-                padding-bottom: 15px;
-                transition: 0.275s;
-            }
-            /* Cells in even rows (2,4,6...) are one color */
-            
-            tr:nth-child(even) td {
-                background: #F1F1F1;
-            }
-            /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
-            
-            tr:nth-child(odd) td {
-                background: #FEFEFE;
-            }
-            
-            tr td:hover {
-                background: #666;
-                color: #FFF;
-            }
-        </style>
-    </HEAD>
-    <BODY>
-        <div class="topbar">
-            <div class="topbarLeft">
-                <a><a>Contact : support.stockwolves@gmail.com</a>
-                <a>+91 9876543210</a>
-            </div>
-            <div class="topbarRight">
-                <!-- REMOVE THE APPROPRIATE TAGS 
-                        WHILE MAKING THE PAGE -->
-                <div class="search-container">
-                    <form action="/php/search.php">
-                        <input type="text" id="searchBox" placeholder="Search for stocks" name="search" />
-                        <input type="image" src="/images/search_icon.png" id="searchButton" />
-                    </form>
+
+<HEAD>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+        Top Performing Stocks | Stock Wolves
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <style>
+        #mytable1 {
+            color: rgb(76, 191, 80);
+            font-family: Helvetica, Arial, sans-serif;
+            width: 70%;
+            height: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid rgb(76, 191, 80);
+            border-radius: 8px;
+        }
+        
+        th {
+            border: 1px solid rgb(76, 191, 80);
+            transition: all 0.3s;
+            border-radius: 3px;
+            height: 40px;
+            color: black;
+        }
+        
+        th {
+            background: greenyellow;
+            /* Darken header a bit */
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        td {
+            background: #FAFAFA;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            transition: 0.275s;
+        }
+        /* Cells in even rows (2,4,6...) are one color */
+        
+        tr:nth-child(even) td {
+            background: #F1F1F1;
+        }
+        /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+        
+        tr:nth-child(odd) td {
+            background: #FEFEFE;
+        }
+        
+        tr td:hover {
+            background: #666;
+            color: #FFF;
+        }
+    </style>
+</HEAD>
+
+<BODY>
+    <script>
+        function myfun() {
+            document.getElementById("demo").innerHTML = Math.random() * 1000;
+            document.getElementById("demo1").innerHTML = Math.random() * 1000;
+            document.getElementById("demo2").innerHTML = Math.random() * 1000;
+            document.getElementById("demo3").innerHTML = Math.random() * 1000;
+            document.getElementById("demo4").innerHTML = Math.random() * 1000;
+            document.getElementById("demo5").innerHTML = Math.random() * 1000;
+            document.getElementById("demo6").innerHTML = Math.random() * 1000;
+            document.getElementById("demo7").innerHTML = Math.random() * 1000;
+            document.getElementById("demo8").innerHTML = Math.random() * 1000;
+            document.getElementById("demo9").innerHTML = Math.random() * 1000;
+            document.getElementById("demo10").innerHTML = Math.random() * 1000;
+            document.getElementById("demo11").innerHTML = Math.random() * 1000;
+            document.getElementById("demo12").innerHTML = Math.random() * 1000;
+            document.getElementById("demo13").innerHTML = Math.random() * 1000;
+            document.getElementById("demo14").innerHTML = Math.random() * 1000;
+            document.getElementById("demo15").innerHTML = Math.random() * 1000;
+            document.getElementById("demo16").innerHTML = Math.random() * 1000;
+            document.getElementById("demo17").innerHTML = Math.random() * 1000;
+            document.getElementById("demo18").innerHTML = Math.random() * 1000;
+            document.getElementById("demo19").innerHTML = Math.random() * 1000;
+            document.getElementById("demo20").innerHTML = Math.random() * 1000;
+            document.getElementById("demo21").innerHTML = Math.random() * 1000;
+            document.getElementById("demo22").innerHTML = Math.random() * 1000;
+            document.getElementById("demo23").innerHTML = Math.random() * 1000;
+            document.getElementById("demo24").innerHTML = Math.random() * 1000;
+            document.getElementById("demo25").innerHTML = Math.random() * 1000;
+            document.getElementById("demo26").innerHTML = Math.random() * 1000;
+            document.getElementById("demo27").innerHTML = Math.random() * 1000;
+            document.getElementById("demo28").innerHTML = Math.random() * 1000;
+            document.getElementById("demo29").innerHTML = Math.random() * 1000;
+            document.getElementById("demo30").innerHTML = Math.random() * 1000;
+            document.getElementById("demo31").innerHTML = Math.random() * 1000;
+        }
+    </script>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="/images/wolf_logo.png" alt="Logo" style="width:30px;" />
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active brand">
+                <a class="nav-link" href="index.html">
+                    Stock Wolves
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Signup</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html#faq">FAQ</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    My Account
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="portfolio.html">My Portfolio</a>
+                    <a class="dropdown-item" href="transaction.html">My Transactions</a>
+                    <a class="dropdown-item" href="calculator.html">Calculator</a>
                 </div>
-                <a href="signup.html">Sign Up</a>
-                <a href="login.html">Sign In</a>
-                <a href="about.html#faq">FAQ</a>
-            </div>
-        </div>
+            </li>
+        </ul>
 
-        <div class="titleBar">
-            <img src="/images/wolf_logo.png" alt="" />
-            <a href="index.html">Stock Market Simulator</a>
-        </div>
+        <form class="form-inline" action="/php/search.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+            <button class="btn btn-success" type="submit">Search</button>
+        </form>
+    </nav>
 
-        <h3>
-            <center><font color="greenyellow" size="+2"><u>Top performing stocks :</u></font><br><br></center>
-        </h3>
-        <div style="overflow-x:auto;">
-            <table border="1" id="mytable1">
-                <tr>
-                    <th>Company name</th>
-                    <th>Opening price</th>
-                    <th>Current price</th>
-                    <th>Price movement</th>
-                    <th>Previous Closing price</th>
-                </tr>
-                <tr>
-                    <td>Apple</td>
-                    <td>$600</td>
-                    <td>$450</td>
-                    <td>$150</td>
-                    <td>$689</td>
-                </tr>
-                <tr>
-                    <td>Amazon</td>
-                    <td>$900</td>
-                    <td>$850</td>
-                    <td>$50</td>
-                    <td>$895</td>
-                </tr>
-                <tr>
-                    <td>Google</td>
-                    <td>$1850</td>
-                    <td>$1500</td>
-                    <td>$350</td>
-                    <td>$2010</td>
-                </tr>
-                <tr>
-                    <td>SpaceX</td>
-                    <td>$3000</td>
-                    <td>$2850</td>
-                    <td>$150</td>
-                    <td>$4700</td>
-                </tr>
-                <tr>
-                    <td>Blue Origin</td>
-                    <td>$70000</td>
-                    <td>$34900</td>
-                    <td>$35100</td>
-                    <td>$76900</td>
-                </tr>
-                <tr>
-                    <td>Cognizant</td>
-                    <td>$380</td>
-                    <td>$300</td>
-                    <td>$80</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>Infosys</td>
-                    <td>$2000</td>
-                    <td>$1750</td>
-                    <td>$250</td>
-                    <td>$3897</td>
-                </tr>
-                <tr>
-                    <td>SAP</td>
-                    <td>$240</td>
-                    <td>$340</td>
-                    <td>$100</td>
-                    <td>$210</td>
-                </tr>
-            </table>
-        </div>
-        <left><svg id="sen" viewBox="-100 -10 300 250" class="chart">
+    <h3>
+        <center>
+            <font color="greenyellow" size="+2"><u>Top performing stocks :</u></font><br><br></center>
+    </h3>
+    <div style="overflow-x:auto;">
+        <table border="1" id="mytable1">
+            <tr>
+                <th>Company name</th>
+                <th>Opening price</th>
+                <th>Current price</th>
+                <th>Price movement</th>
+                <th>Previous Closing price</th>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td onclick="myfun()">
+                    <p id="demo" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo1" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo2" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo3" class="hello"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Amazon</td>
+                <td onclick="myfun()">
+                    <p id="demo4" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo5" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo6" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo7" class="hello"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Google</td>
+                <td onclick="myfun()">
+                    <p id="demo8" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo9" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo10" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo11" class="hello"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>SpaceX</td>
+                <td onclick="myfun()">
+                    <p id="demo12" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo13" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo14" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo15" class="hello"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Blue Origin</td>
+                <td onclick="myfun()">
+                    <p id="demo16" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo17" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo18" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo19" class="hello"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Cognizant</td>
+                <td onclick="myfun()">
+                    <p id="demo20" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo21" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo22" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo23" class="hello"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Infosys</td>
+                <td onclick="myfun()">
+                    <p id="demo24" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo25" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo26" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo27" class="hello"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>SAP</td>
+                <td onclick="myfun()">
+                    <p id="demo28" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo29" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo30" class="hello"></p>
+                </td>
+                <td onclick="myfun()">
+                    <p id="demo31" class="hello"></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <left><svg id="sen" viewBox="-100 -10 300 250" class="chart">
                 <rect x="5" y="0" width="80" height="40" style="stroke: #0086b3; fill: #ccf2ff"></rect>
                 <line stroke-dasharray="2,2" x1="5" y1="10" x2="85" y2="10" style="stroke:#0086b3;stroke-width:0.5"></line>
                 <line stroke-dasharray="2,2" x1="5" y1="20" x2="85" y2="20" style="stroke:#0086b3;stroke-width:0.5"></line>
@@ -170,17 +291,21 @@
                 id="sensexpoly"
                 fill="none"
                 stroke="#ff6347"
-                stroke-width="1"
-                points="15 5 10 30 30 5 40 25 50 30 60 27.5 70 15"
+                stroke-width="0.8"
+                points="10 22 20 5 30 9 40 30 55 33 60 34 80 10"
             ></polyline>
             <polyline
                 id="niftypoly"
                 fill="none"
                 stroke="rgb(60, 179, 113)"
-                stroke-width="1"
+                stroke-width="0.8"
                 points="10 25 20 15 30 30 40 27.5 50 32 60 29 70 10"
             ></polyline>
             <text x="78" y="38" font-family="30" font-size="2.4" fill="#000000">40</text>
         </svg></left>
-    </BODY>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</BODY>
+
 </HTML>

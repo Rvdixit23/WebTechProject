@@ -1,23 +1,12 @@
-#signUp {
-    background-color: white;
+#signup-heading {
     color: #4cbf50;
-    font-family: "Roboto", sans-serif;
-    text-decoration: underline;
-    overflow: hidden;
-    font-weight: bold;
     text-align: center;
-    image-resolution: 32px;
-    display: block;
-    padding: 15px;
-    font-size: 30px;
-    opacity: 1;
-    animation: titleAni 5s linear 2s infinite alternate;
 }
 
 form#login {
     text-align: center;
     border-radius: 5px;
-    background-color: rgba(216, 211, 211, 0.623);
+    background-color: darkslategrey;
     padding: 0.5%;
     width: 50%;
     margin: auto;
@@ -27,11 +16,7 @@ form#login {
     grid-gap: 20px;
 }
 
-.formDiv {
-    display: inline-block;
-}
-
-.inputBoxes .userDetails input {
+.inputBoxes .userDetails #login > input {
     width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -43,7 +28,7 @@ form#login {
     grid-column: 1 /1;
 }
 
-.accountDetails input {
+.accountDetails #login > input {
     width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -55,11 +40,11 @@ form#login {
     grid-column: 1 /2;
 }
 
-.inputBoxes>a {
+.inputBoxes > a {
     color: grey;
 }
 
-.inputBoxes>a:visited {
+.inputBoxes > a:visited {
     color: grey;
 }
 
@@ -70,7 +55,7 @@ label {
     font-size: 24px;
 }
 
-button {
+button#registerButton {
     background-color: #4caf50;
     border: none;
     color: white;
@@ -84,12 +69,4 @@ button {
     font-weight: bold;
     align-self: center;
     width: 75%;
-}
-
-button:hover {
-    background-color: limegreen;
-}
-
-button:active {
-    background-color: green;
 }

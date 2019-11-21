@@ -1,94 +1,152 @@
 <!DOCTYPE html>
-<HTML lang="en">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>
+            Calculator | Stock Wolves
+        </title>
 
-<HEAD>
-    <meta charset="UTF-8" />
-    <meta name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-        Calculator | Stock Wolves
-    </title>
-    <link rel="icon" href="/images/favicon.png" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/calculator.css" />
-</HEAD>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="icon" href="/images/favicon.png" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/calculator.css" />
+    </head>
 
-<BODY>
-    <div class="background"></div>
-    <div class="topbar">
-        <div class="topbarLeft">
-            <a><a>Contact : support.stockwolves@gmail.com</a>
-            <a>+91 9876543210</a>
-        </div>
-        <div class="topbarRight">
-            <!-- REMOVE THE APPROPRIATE TAGS 
-                        WHILE MAKING THE PAGE -->
-            <div class="search-container">
-                <form action="search.php">
-                    <input type="text" id="searchBox" placeholder="Search for stocks" name="search" />
-                    <input type="image" src="search_icon.png" id="searchButton" />
-                </form>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/wolf_logo.png" alt="Logo" style="width:30px;" />
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active brand">
+                    <a class="nav-link" href="index.html">
+                        Stock Wolves
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html#faq">FAQ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        My Account
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="portfolio.html">My Portfolio</a>
+                        <a class="dropdown-item" href="transaction.html">My Transactions</a>
+                        <a class="dropdown-item" href="calculator.html">Calculator</a>
+                    </div>
+                </li>
+            </ul>
+
+            <form class="form-inline" action="/php/search.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </nav>
+
+        <br />
+        <br /><br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3 simple-calc-column">
+                    <br />
+                    <h1 class="h1" id="simple-calc-heading" style="color: limegreen;">Simple Calculator</h1>
+                    <br /><br /><br />
+                    <div class="simple-calculator">
+                        <form action="" name="form">
+                            <input class="textview" name="textview" />
+                        </form>
+
+                        <br />
+                        <table>
+                            <tr>
+                                <td><input class="button" type="button" value="AC" /></td>
+                                <td><input class="button" type="button" value="C" /></td>
+                                <td><input class="button" type="button" value="/" /></td>
+                                <td><input class="button" type="button" value="*" /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button" type="button" value="7" /></td>
+                                <td><input class="button" type="button" value="8" /></td>
+                                <td><input class="button" type="button" value="9" /></td>
+                                <td><input class="button" type="button" value="-" /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button" type="button" value="4" /></td>
+                                <td><input class="button" type="button" value="5" /></td>
+                                <td><input class="button" type="button" value="6" /></td>
+                                <td><input class="button" type="button" value="+" /></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button" type="button" value="1" /></td>
+                                <td><input class="button" type="button" value="2" /></td>
+                                <td><input class="button" type="button" value="3" /></td>
+                                <td rowspan="2"><input class="button" type="button" value="=" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input class="button" type="button" value="0" /></td>
+                                <td><input class="button" type="button" value="." /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-5 equity-calc-column">
+                    <br />
+                    <h1 class="h1" id="equity-calc-heading" style="color: limegreen;">Equity Calculator</h1>
+                    <br />
+                    <br />
+                    <div id="equity">
+                        <label>Stock Value:</label>
+                        <input type="text" id="stock" value="" /> <br /><br />
+                        <label>Number of Shares:</label>
+                        <input type="text" id="number" value="" /> <br /><br />
+                        <label>Rate:</label>
+                        <input type="text" id="rate" value="" /> <br /><br />
+                        <label>Time:</label>
+                        <input type="text" id="time" value="" /> <br /><br /><br />
+                        <button id="solve" onclick="solve()">Calculate</button> <br /><br />
+                        <label>Result:</label>
+                        <input type="text" id="final" value="" /> <br /><br />
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
             </div>
-            <a href="signup.html">Sign Up</a>
-            <a href="login.html">Sign In</a>
-            <a href="">Contact Us</a>
         </div>
-    </div>
 
-    <div class="titleBar">
-        <img src="/images/wolf_logo.png" alt="" />
-        <a href="index.html">Stock Market Simulator</a>
-    </div>
+        <br />
 
-    <br />
-    <div class="main">
-        <form action="" name="form">
-            <input class="textview" name="textview" />
-        </form>
-        <table>
-            <tr>
-                <td><input class="button" type="button" value="AC" /></td>
-                <td><input class="button" type="button" value="C" /></td>
-                <td><input class="button" type="button" value="/" /></td>
-                <td><input class="button" type="button" value="*" /></td>
-            </tr>
-            <tr>
-                <td><input class="button" type="button" value="7" /></td>
-                <td><input class="button" type="button" value="8" /></td>
-                <td><input class="button" type="button" value="9" /></td>
-                <td><input class="button" type="button" value="-" /></td>
-            </tr>
-            <tr>
-                <td><input class="button" type="button" value="4" /></td>
-                <td><input class="button" type="button" value="5" /></td>
-                <td><input class="button" type="button" value="6" /></td>
-                <td><input class="button" type="button" value="+" /></td>
-            </tr>
-            <tr>
-                <td><input class="button" type="button" value="1" /></td>
-                <td><input class="button" type="button" value="2" /></td>
-                <td><input class="button" type="button" value="3" /></td>
-                <td rowspan="2"><input class="button" type="button" value="=" /></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input class="button" type="button" value="0" /></td>
-                <td><input class="button" type="button" value="." /></td>
-            </tr>
-        </table>
-    </div>
+        <script rel="text/javascipt" src="js/calculator.js"></script>
 
-    <br />
-
-    <div id="equity">
-        <input type="textbox" id="stock" value="" />STOCK_VALUE<br /><br>
-        <input type="textbox" id="number" value="" />NUMBER OF SHARES<br /><br>
-        <input type="textbox" id="rate" value="" />RATE<br /><br>
-        <input type="textbox" id="time" value="" />TIME<br /><br>
-        <input type="textbox" id="final" value="" />FINAL VALUE<br /><br>
-        <button id="solve" onclick="solve()">SOLVE</button>
-    </div>
-
-    <script rel="text/javascipt" src="js/calculator.js"></script>
-</BODY>
-
-</HTML>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

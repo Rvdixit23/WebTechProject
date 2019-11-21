@@ -16,21 +16,24 @@ var news = [
     "Oneplus soars in market"
 ];
 sensexInsert();
+
 function start() {
-    signFunc();
+    signFunc()
     setInterval("TIMER()", 50); //in milliseconds
 }
+
 function pointConvert(a) {
     return 30 - a / 10 + 5;
 }
+
 function TIMER() {
     timer += 1;
-    console.log(timer);
     sensexInsert();
     niftyInsert();
     barAssign();
     headLines();
 }
+
 function sensexInsert() {
     if (sensex.length && timer % 5 == 0) {
         var b = pointConvert(sensex.shift());
@@ -43,6 +46,7 @@ function sensexInsert() {
         sencount++;
     }
 }
+
 function niftyInsert() {
     if (nifty.length && timer % 5 == 0) {
         var b = pointConvert(nifty.shift());
@@ -55,6 +59,7 @@ function niftyInsert() {
         nifcount++;
     }
 }
+
 function barAssign() {
     var svg = document.getElementById("sen");
     if (timer % 20 == 5) {
@@ -62,27 +67,28 @@ function barAssign() {
         var b = barg.shift() / 2;
         barobj.setAttribute("height", b);
         barobj.setAttribute("y", 50 - b);
-        barg.push(b*2);
+        barg.push(b * 2);
     } else if (timer % 20 == 10) {
         var barobj = document.getElementById("bar2");
         var b = barg.shift() / 2;
         barobj.setAttribute("height", b);
         barobj.setAttribute("y", 50 - b);
-        barg.push(b*2);
+        barg.push(b * 2);
     } else if (timer % 20 == 15) {
         var barobj = document.getElementById("bar3");
         var b = barg.shift() / 2;
         barobj.setAttribute("height", b);
         barobj.setAttribute("y", 50 - b);
-        barg.push(b*2);
+        barg.push(b * 2);
     } else if (timer % 20 == 0) {
         var barobj = document.getElementById("bar4");
         var b = barg.shift() / 2;
         barobj.setAttribute("height", b);
         barobj.setAttribute("y", 50 - b);
-        barg.push(b*2);
+        barg.push(b * 2);
     }
 }
+
 function headLines() {
     if (news.length && (timer % 20 == 0 || timer == 10)) {
         var t1 = document.getElementById("hd1");
@@ -99,57 +105,59 @@ function headLines() {
     }
 }
 
-function signFunc()
-{
-    var div=document.getElementById("topbarRight")
-    var faq=document.createElement("a");
-    faq.id='faq';
-    faq.innerHTML='FAQ';
-    faq.href='about.html';
+function signFunc() {
+    var div = document.getElementById("topbarRight")
+    var faq = document.createElement("a");
+    faq.id = 'faq';
+    faq.innerHTML = 'FAQ';
+    faq.href = 'about.html';
     div.appendChild(faq);
+    var cook = document.cookie.split(";")
+    var cook = cook[0].split('=');
 
-   if(document.cookie=="")
-   {
-    var signup=document.createElement("a");
-    signup.id='sup';
-    signup.href='signup.html';
-    signup.innerHTML='Sign Up';
-    var login=document.createElement("a");
-    login.id='lin';
-    login.href='login.html';
-    login.innerHTML='Sign In';
-    div.appendChild(signup);
-    console.log('donA');
-    div.appendChild(login);
-    console.log('donB');
+    if (cook[1] == "%2F") {
+        var signup = document.createElement("a");
+        signup.id = 'sup';
+        signup.href = 'signup.html';
+        signup.innerHTML = 'Sign Up';
+        var login = document.createElement("a");
+        login.id = 'lin';
+        login.href = 'login.html';
+        login.innerHTML = 'Sign In';
+        div.appendChild(signup);
+        console.log('donA');
+        div.appendChild(login);
+        console.log('donB');
+    } else {
+        var hello = document.createElement("a");
+        hello.innerHTML = 'Hi, ' + cook[1];
+        hello.id = 'hello';
+        hello.href = 'index.html'
+        var signout = document.createElement("a");
+        signout.id = 'sout';
+        signout.onclick = clearCookie;
+        signout.href = 'index.html';
+        signout.innerHTML = 'Sign Out';
+        var calcer = document.createElement("a");
+        calcer.id = "calculator";
+        calcer.href = "calculator.html";
+        calcer.innerHTML = "Calc";
+        var transaction = document.createElement("a");
+        transaction.id = "transaction";
+        transaction.href = "transaction.html";
+        transaction.innerHTML = "Transact";
+
+        div.appendChild(calcer);
+        div.appendChild(transaction);
+        div.appendChild(signout);
+        div.appendChild(hello);
     }
-   else
-   {
-    var hello=document.createElement("a");
-    var cook=document.cookie.split('=');
-    hello.innerHTML='Hi, '+cook[1];
-    hello.id='hello';
-    hello.href='index.html'
-    var signout=document.createElement("a");
-    signout.id='sout';
-    signout.onclick=clearCookie;
-    signout.href='index.html';
-    signout.innerHTML='Sign Out';
-    var calcer=document.createElement("a");
-    calcer.id="calculator";
-    calcer.href="calculator.html";
-    calcer.innerHTML="Calculator";
-    var transaction=document.createElement("a");
-    transaction.id="transaction";
-    transaction.href="transaction.html";
-    transaction.innerHTML="Transaction";
-
-    div.appendChild(calcer);
-    div.appendChild(transaction);
-    div.appendChild(signout);
-   }
 }
-function clearCookie()
-{
-    document.cookie==""
+
+function clearCookie() {
+    var date = new Date;
+    date.setMonth(date.getMonth - 1);
+    console.log(date.toUTCString);
+    document.cookie = "name= ;" + "expires=" + date.toUTCString + ";";
+    console.log("cleared-cookie");
 }
