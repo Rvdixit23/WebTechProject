@@ -18,8 +18,9 @@ td, th {
 }
 
 th {  
-    background: #DFDFDF;  /* Darken header a bit */
+    background:yellowgreen;  /* Darken header a bit */
     font-weight: bold;
+    text-align: center;
 }
 
 td {  
